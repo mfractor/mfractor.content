@@ -14,7 +14,7 @@ MFractor 3.10 includes a revamp code issue tooltip that includes any available f
 
 To fix a code issue, simply click on one of the available fixes:
 
-![Integrated code fix](/img/inline-code-fixes.gif)
+![Integrated code fix](img/inline-code-fixes.gif)
 
 # Image Tooltips
 Building mobile apps is asset-heavy and image resources are one of the backbones of development. However, one of the difficulties when working with images is locating the correct resource when coding.
@@ -23,13 +23,11 @@ To make this easier, we've introduced image tooltips to let you preview any imag
 
 Simply hover your cursor over an image name and a preview of that image will display. We also preview that image in IntelliSense!
 
-![XAML image tooltips](/img/image-tooltips.gif)
+![XAML image tooltips](img/image-tooltips.gif)
 
 Even better, image tooltips are also support on Android resource lookups in C#:
 
-![Android image tooltips](/img/android-image-tooltip.png)
-
- ![XAML color tooltips](/img/color-tooltips.gif)
+![Android image tooltips](img/android-image-tooltip.png)
 
 ## And Much More
 
@@ -40,7 +38,10 @@ At a glance:
  * Color tooltips in XAML:
   * Hover over a color to preview it.
   * In IntelliSense, we display a preview of the color as a tooltip.
-  * For StaticResource expressions that evaluate to a color, we provide a tooltip of the color the resource will return/
+  * For StaticResource expressions that evaluate to a color, we provide a tooltip of the color the resource will return.
+
+![XAML color tooltips](img/color-tooltips.gif)
+
  * Static Resource refactorings:
    * Use the **Move to App.xaml** refactoring to shift a resource from a page or control into the App.xaml file.
    * Use the **Refactor into static resource** code action to shift an attributes value into a resource entry in the current file or in the App.xaml.
