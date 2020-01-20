@@ -1,54 +1,54 @@
-#
+# MFractor 3.10
 
-
-Building mobile apps is asset-heavy and image resources are one of the backbones of development. One of the difficulties when working with images is locating the correct resource.
-
-Often we are trying to lookup images by name and do not have a visual preview of that image. Without being able to see the image, there is no easy way to verify it's the right asset.
-
-In MFractor 3.10, we've introduced iamge tooltips to solve this problem. Image tooltips are support in XAML, C# and in iOS and Android projects.
+Kicking of the decade we have just released MFractor 3.10, a big upgrade
 
 Let's dive into each feature.
 
-#
-MFractor 3.10 is now available and this release we've added image tooltips across the board.
+# Inline Code Fixes
 
- Re-enabled image tooltips to make it much easier to work with images.
+One of MFractors strengths is that it can spot 80+ common issues in XAML, from missing view model properties to matching styles.
 
- This allows you to visually preview images in XAML, making it easier to lcoate
+We've always offered many fixes to resolve code issues, however, they weren't intuitive to use.
 
- * Hover in XAML and C#
- * For XAML Intellisense completions
+MFractor 3.10 includes a revamp code issue tooltip that includes any available fixes for the issues it spots.
 
- When applying an image to an `ImageSource`, our image intellisense in XAML now also shows you a preview
+To fix a code issue, simply click on one of the available fixes:
 
- Also supported for Android drawables.
+![Integrated code fix](/img/inline-code-fixes.gif)
 
-# Image Tooltips for Android
+# Image Tooltips
+Building mobile apps is asset-heavy and image resources are one of the backbones of development. However, one of the difficulties when working with images is locating the correct resource when coding.
 
+To make this easier, we've introduced image tooltips to let you preview any image asset.
 
-# Image Tooltips for C#
+Simply hover your cursor over an image name and a preview of that image will display. We also preview that image in IntelliSense!
 
-MFractor supports image tooltips for Android projects in C# for Resources lookups.
+![XAML image tooltips](/img/image-tooltips.gif)
 
-Hover over a Resources.Drawable.imageName to see a previews.
+Even better, image tooltips are also support on Android resource lookups in C#:
 
-When attaching an image to an activity (EG: Using Icon="@drawable/myImage"), MFractor shows a preview.
+![Android image tooltips](/img/android-image-tooltip.png)
 
- To use, hover over a color.
+ ![XAML color tooltips](/img/color-tooltips.gif)
 
-# Color Tooltips
+## And Much More
 
- * Hover in XAML
- * XAML intellisense previews
+Lastly, MFractor 3.10 includes a tonne of additional features, enhancements and bug fixes.
 
-# Static Resource actions
+At a glance:
 
-# Additional Features in 3.10
+ * Color tooltips in XAML:
+  * Hover over a color to preview it.
+  * In IntelliSense, we display a preview of the color as a tooltip.
+  * For StaticResource expressions that evaluate to a color, we provide a tooltip of the color the resource will return/
+ * Static Resource refactorings:
+   * Use the **Move to App.xaml** refactoring to shift a resource from a page or control into the App.xaml file.
+   * Use the **Refactor into static resource** code action to shift an attributes value into a resource entry in the current file or in the App.xaml.
+ * The new **Generate Font Character Code Class** creates a C# class with all font character names and icons available as string constants.
+ * A revamped activation dialog plus shortcuts to request trial license and recover Professional licenses.
+ * Integrated help links into many features.
+ * And more!
 
- * Color tooltis for XAML
- *
+The full release notes for MFractor 3.10 be found here.
 
-Full release notes can be found
-
-
-To get full access to our image tooltips, purchase 
+To get full access to inline code fixes, image tooltips, color tooltips and all our other features, purchase a license at https://www.mfractor.com/buy.
