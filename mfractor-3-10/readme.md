@@ -38,9 +38,9 @@ Lastly, MFractor 3.10 includes a tonne of additional features, enhancements and 
 At a glance:
 
  * Color tooltips in XAML:
-  * Hover over a color to preview it.
-  * In IntelliSense, we display a preview of the color as a tooltip.
-  * For StaticResource expressions that evaluate to a color, we provide a tooltip of the color the resource will return/
+   * Hover over a color to preview it.
+   * In IntelliSense, we display a preview of the color as a tooltip.
+   * For StaticResource expressions that evaluate to a color, we provide a tooltip of the color the resource will return/
  * Static Resource refactorings:
    * Use the **Move to App.xaml** refactoring to shift a resource from a page or control into the App.xaml file.
    * Use the **Refactor into static resource** code action to shift an attributes value into a resource entry in the current file or in the App.xaml.
