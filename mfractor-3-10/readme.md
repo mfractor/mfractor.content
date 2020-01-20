@@ -36,9 +36,9 @@ Lastly, MFractor 3.10 includes a tonne of additional features, enhancements and 
 At a glance:
 
  * Color tooltips in XAML:
-  * Hover over a color to preview it.
-  * In IntelliSense, we display a preview of the color as a tooltip.
-  * For StaticResource expressions that evaluate to a color, we provide a tooltip of the color the resource will return.
+   * Hover over a color to preview it.
+   * In IntelliSense, we display a preview of the color as a tooltip.
+   * For StaticResource expressions that evaluate to a color, we provide a tooltip of the color the resource will return.
 
 ![XAML color tooltips](img/color-tooltips.gif)
 
