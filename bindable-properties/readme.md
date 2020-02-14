@@ -1,4 +1,4 @@
-**Xamarin.Forms Bindable Properties**
+**Using Bindable Properties In Xamarin.Forms**
 
 I would argue the nicest feature of Xamarin is the ability to create custom controls natively or simply extend existing ones. If you have tried other mobile frameworks, you will notice quickly that you are limited to what they provide and making only composite controls. They real power isn't just that you can create visually stunning UIs but that through bindable properties your component can interact at runtime with the backend code making it as powerful as those provided out of the box.
 
