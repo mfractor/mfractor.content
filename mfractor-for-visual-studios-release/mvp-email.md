@@ -10,12 +10,12 @@ Over the last few years I've worked to identify and address ways to improve the 
 
 I plan to continue doing this and, hopefully, start going faster now that a Windows product is available.
 
-Therefore, a small request: As the organisers of local user groups, it would be extremely helpful if the Windows release could be mentioned in your local user group for this month. I've attached our logo image and you can include the text below as a single slide:
+Therefore, a small request: As the organisers of local user groups, it would be extremely helpful if the Windows release be mentioned in your local user group for this month. I've attached our logo image and you can include the text below as a single slide:
 
 ----
 MFractor is now available for Visual Studio Windows.
 
-A powerful productivity tool for Xamarin developers,
+A powerful productivity tool for Xamarin developers, MFractor
 
 Learn more at: https://www.mfractor.com/blogs/news/mfractor-for-visual-studio-windows-now-available
 

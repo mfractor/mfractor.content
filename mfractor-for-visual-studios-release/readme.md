@@ -23,7 +23,21 @@ For example, noticing a common set of properties in a control type? Use the [Ext
 
 ![Using MFractors XAML style extraction refactoring](img/extract-xaml-style.gif)
 
-Lastly, MFractor adds MVVM navigation shortcuts, design-time binding analysis and IntelliSense for your ViewModels, many additional IntelliSense completions and much, much more. [Please see our documention to learn more]().
+MVVM is one of the most common development patterns in Xamarin.Forms and MFractor streamlines your development workflows when using MVVM. Our intelligent view-model resolver can find the ViewModel for a view by [either naming convention](https://docs.mfractor.com/xamarin-forms/binding-context-resolution/automatic-viewmodel-detection/), [explicit binding context wireup](https://docs.mfractor.com/xamarin-forms/binding-context-resolution/binding-context-evaluation/) or [using our DesignTimeBindingContextAttribute](https://docs.mfractor.com/xamarin-forms/binding-context-resolution/design-time-binding-context-attribute/), enabling multiple
+
+Use the View/ViewModel navigation shortcuts to easily move between your XAML views, code behinds and
+
+![Using MFractors XAML style extraction refactoring](img/extract-xaml-style.gif)
+
+Our data-binding analysis spots potential binding bugs and allows you to fix them in a single click:
+
+![MFractors ViewModel data binding analysis and code fixes](img/data-binding-analysis.png)
+
+Our ViewModel data-binding IntelliSense conveniently puts all available ViewModel properties at your fingertips:
+
+![MFractors ViewModel data binding IntelliSense](img/data-binding-intellisense.png)
+
+[Please visit our documentation to see our full range of Xamarin.Forms tools](https://docs.mfractor.com/xamarin-forms/overview/).
 
 ### Mobile Image Assets Simplified
 Image assets are the backbones of mobile apps and, love em or hate em, those many image density files are here to stay.
@@ -32,15 +46,21 @@ Nobody likes adding the same image 9 times into a solution (talk about tedious).
 
 Choose a source image, the projects you want to add that image too and voila! MFractor will generate all the density variants of that asset:
 
-![Using the image importer to easily add a new image asset into ](img/image-importer.png)
+![Using the image importer to easily add a new image asset into a mobile solution](img/image-importer.png)
 
-MFractor's image toolsuite also includes:
+Use our [image asset manager](https://docs.mfractor.com/image-management/managing-image-assets/) pad to view all images in your solution and lets you visually explore them:
 
- * [The Image Manager](https://docs.mfractor.com/image-management/managing-image-assets/): A pad that summarises all images in your solution and lets you visually explore them.
- * [The Image Deletion Tool](https://docs.mfractor.com/image-management/deleting-image-assets/): Remove all traces of an image asset from your Android and iOS projects.
- * [The Image Optimiser](https://docs.mfractor.com/image-management/optimising-image-assets/): Significantly reduce the size your image assets with no visual quality loss.
+![Using the mobile image asset manager](img/image-asset-manager.png)
 
-Thesea featur
+Easily delete all densities of an image asset from all iOS and Android projects in your solution using the [the image deletion tool](https://docs.mfractor.com/image-management/deleting-image-assets/):
+
+![The image deletion tool](img/image-deletion-tool.png)
+
+Use image asset tooltips, supported in XAML, C# and for Android projects, to visually see an image asset in code:
+
+![Image asset tooltips](img/image-tooltips.png)
+
+[Please view our image management documentation to see our full range of image tools.]
 
 ## How do I get MFractor for Visual Studio Windows?
 
@@ -62,7 +82,7 @@ Our free-to-use tier, MFractor Lite is suitable for hobbyist or students.
 
 Use all MFractors XAML features in up to 4 XAML files per day and gain view-only access to all our other features such as the image importer, font importer or image manager.
 
-MFractor Lite is a great way to try out the product before purchasing to our paid version.
+MFractor Lite is a great way to try out the product before purchasing our Professional version.
 
 ### MFractor Professional
 
