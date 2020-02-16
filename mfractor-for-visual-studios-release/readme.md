@@ -60,7 +60,7 @@ Use image asset tooltips, supported in XAML, C# and for Android projects, to vis
 
 ![Image asset tooltips](img/image-tooltips.png)
 
-[Please view our image management documentation to see our full range of image tools.]
+[Please view our image management documentation to see our full range of image tools.](https://docs.mfractor.com/image-management/overview/)
 
 ## How do I get MFractor for Visual Studio Windows?
 
