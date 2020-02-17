@@ -6,7 +6,7 @@ Long anticipated, MFractor is a collection of powerful productivity tools for Xa
 
 ## Benefits of MFractor for Visual Studio Windows
 
-MFractor really shines in two major areas of Xamarin development; writing beautiful, bug free XAML and managing the image assets in your Android and iOS projects.
+MFractor shines in two major areas of Xamarin development; writing beautiful, bug free XAML and managing your Android and iOS projects image assets.
 
 ### Craft Beautiful XAML
 Amongst Xamarin developers, Xamarin.Forms is a very popular way to create compelling mobile applications with maximum code reuse using C# and XAML.

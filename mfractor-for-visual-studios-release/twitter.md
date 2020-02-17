@@ -1,7 +1,7 @@
 MFractor is now available for Visual Studio Windows! 🥳
 
-Long anticipated, I'm excited to now offer our suite of powerful Xamarin productivity tools to Windows developers.
+Stop wasting time on busy-work and spend more time writing code that matters.
 
-Read the announcement to learn more:
+Read the announcement to learn more about MFractor for @VisualStudio:
 
 https://www.mfractor.com/blogs/news/mfractor-for-visual-studio-windows-now-available
