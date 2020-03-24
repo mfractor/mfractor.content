@@ -46,7 +46,7 @@ Now let’s create renderers that will utilize the new bindable properties based
 ### MFractor
 Click Alt+Return on the custom controls name and select ‘Generate custom renderers…’. A folder named Renderers will be created in each platform project with the control’s renderer class.
 
-![Drag Racing]( https://user-images.githubusercontent.com/4968267/72367779-0988d200-36ba-11ea-85f3-ce593c1b3341.png=550x)
+![Drag Racing](https://user-images.githubusercontent.com/4968267/72367779-0988d200-36ba-11ea-85f3-ce593c1b3341.png)
 
 The generated file should look something like this.
 
@@ -83,21 +83,21 @@ Creating these classes manually really isn’t that difficult but having a tool 
 
 Let’s begin by ensuring we can nest files.  In order to enable this is Visual Studio Mac, install the file nesting extension
 
-![Drag Racing](https://user-images.githubusercontent.com/4968267/72367651-ce869e80-36b9-11ea-8181-87d2e7806612.png=550x)
+![Drag Racing](https://user-images.githubusercontent.com/4968267/72367651-ce869e80-36b9-11ea-8181-87d2e7806612.png)
 
 Now in your shared project, create a folder called ‘CustomControls’ and add the new control file we created at the beginning.  In the same folder create a class called ‘CoreButtonRenderer.Droid.cs’ and ‘CoreButtonRenderer.iOS.cs’.  I annotate the file name with the platform so that is visually easy to differentiate and as well as prevent duplicate name conflicts.  Now, right click on the file and select ‘File Nesting’ and place it under the custom control.
 
-![Drag Racing](https://user-images.githubusercontent.com/4968267/72367540-98491f00-36b9-11ea-9c41-4b40bad8bfed.png=550x)
+![Drag Racing](https://user-images.githubusercontent.com/4968267/72367540-98491f00-36b9-11ea-9c41-4b40bad8bfed.png)
 
 The project should look like this now and visually it is easy to find the renderers without jumping around to different projects.
 
-![Drag Racing](https://user-images.githubusercontent.com/4968267/72363249-bf9bee00-36b1-11ea-8ecf-249fdd6eba8e.png=250x)
+![Drag Racing](https://user-images.githubusercontent.com/4968267/72363249-bf9bee00-36b1-11ea-8ecf-249fdd6eba8e.png)
 
 One last thing we need to do is allow disparate platform specific code within the same project.  This is accomplished using compiler directives.  Surround the entire code with the appropriate directive as shown below.
 
-![Drag Racing](https://user-images.githubusercontent.com/4968267/72367628-bf075580-36b9-11ea-905a-1ad48cf77c88.png=550x)
+![Drag Racing](https://user-images.githubusercontent.com/4968267/72367628-bf075580-36b9-11ea-905a-1ad48cf77c88.png)
 
-![Drag Racing](https://user-images.githubusercontent.com/4968267/72367574-ab5bef00-36b9-11ea-8f3c-e48e4cf2370c.png=550x)
+![Drag Racing](https://user-images.githubusercontent.com/4968267/72367574-ab5bef00-36b9-11ea-8f3c-e48e4cf2370c.png)
 
 ## Renderer Implementation
 In our renderers we need to create a gradient layer that can be placed in the background of the control. The code base provided is very simple and production code should accommodate for property changes as well as give the user a visual indication that the button has been clicked.
@@ -224,6 +224,6 @@ Now it is time to use our new control and see how it looks and behaves. Here is 
 
 Here is the result!
 
-![Drag Racing](https://user-images.githubusercontent.com/4968267/72618232-e6e3fc80-38f7-11ea-847d-2e92361f0835.png=250x)
+![Drag Racing](https://user-images.githubusercontent.com/4968267/72618232-e6e3fc80-38f7-11ea-847d-2e92361f0835.png)
 
 The entire code base can be found on [Github](https://github.com/azdevelopnet/MFactor/tree/master/RendererExample). Enjoy the incredible tools provided by MFractor and try file nesting to see if it cleans up your project files and organization.
