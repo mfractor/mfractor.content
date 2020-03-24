@@ -2,9 +2,9 @@
 
 ## Introduction
 
-Grids are one of the most powerful controls in Xamarin.Forms.
+Grids, simply put, are one of the most powerful controls in Xamarin.Forms.
 
-Using Grids, we build UIs that can adapt to different screen sizes and to create layering so we can place elements on top of one another (For example, a floating action button).
+Using Grids we can build rich and flexible UIs; we can create responsive layouts that adapt to different screen sizes or even place elements on top of one another to achieve layering (for example, a floating action button).
 
 But, to quote Uncle Ben, with great power comes great responsibility 🕷
 
