@@ -4,11 +4,13 @@
 
 Grids, simply put, are one of the most powerful controls in Xamarin.Forms.
 
-Using Grids we can build rich and flexible UIs; we can create responsive layouts that adapt to different screen sizes or even place elements on top of one another to achieve layering (for example, a floating action button).
+Using Grids we can build rich and flexible UIs. For example, we can create responsive layouts that adapt to different screen sizes or place elements on top of one another to achieve layering (for example, a floating action button).
 
 But, to quote Uncle Ben, with great power comes great responsibility 🕷
 
-What is this responsibility you ask? Well, each grid we build needs to be maintained! Here are some examples of the maintenance issues with grids:
+What is this responsibility you ask? Well, each grid we build needs to be maintained! 
+
+Here are some examples of the maintenance issues with grids:
 
  * When we add a new row or column, we often need to adjust several other elements. A single change in a grid can mean we need retest our entire UI to make sure it still works correctly and we haven't introduced any new bugs.
  * We position views in a grid through a zero-based row or column index. Computers love numbers but humans love names, zero-based index locations aren't intuitive for us to use.
