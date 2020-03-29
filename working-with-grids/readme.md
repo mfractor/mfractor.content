@@ -2,13 +2,15 @@
 
 ## Introduction
 
-Grids are one of the most powerful controls in Xamarin.Forms.
+Grids, simply put, are one of the most powerful controls in Xamarin.Forms.
 
-Using Grids, we build UIs that can adapt to different screen sizes and to create layering so we can place elements on top of one another (For example, a floating action button).
+Using Grids we can build rich and flexible UIs. For example, we can create responsive layouts that adapt to different screen sizes or place elements on top of one another to achieve layering (for example, a floating action button).
 
 But, to quote Uncle Ben, with great power comes great responsibility 🕷
 
-What is this responsibility you ask? Well, each grid we build needs to be maintained! Here are some examples of the maintenance issues with grids:
+What is this responsibility you ask? Well, each grid we build needs to be maintained! 
+
+Here are some examples of the maintenance issues with grids:
 
  * When we add a new row or column, we often need to adjust several other elements. A single change in a grid can mean we need retest our entire UI to make sure it still works correctly and we haven't introduced any new bugs.
  * We position views in a grid through a zero-based row or column index. Computers love numbers but humans love names, zero-based index locations aren't intuitive for us to use.
@@ -73,7 +75,7 @@ This refactoring will create rows if the StackLayout is vertical or columns if t
 
 After we have declared a grid, it is likely that we want to document the intended usage of each row or column and provide an easy way for developers to understand our grids layout.
 
-Over the years I have used and seen others use the following code to annotate the intended behaviour of a row/column:
+Over the years I have used, and seen others use, the following code to annotate the intended behaviour of a row/column:
 
 ```
  <RowDefinition Height="Auto"/> <!-- Index: 1 - Password Entry Row -->
@@ -91,19 +93,19 @@ These annotations enable us to look at the definitions and instantly see the ind
 
 Grid adornments are useful as they show us the row/columns precise location in the grid. However, they don't *describe* the intention for a particular row or column in a grid.
 
-To describe what a row or column does, we can apply the `x:Name` attribute with a short, descriptive name of the element:
+To describe what a row or column does, I recommend applying an `x:Name` attribute with a short, descriptive name of the element:
 
 `<RowDefinition x:Name="passwordRow" Height="Auto"/>`
 
 This clearly documents the indented usage of the row, making it easier for future developers to understand our code.
 
-Applying `x:Name`'s to your rows and columns will also activate several MFracotr features.
+Applying `x:Name`'s to your rows and columns will also activate several MFractor features.
 
-If you have applied an x:Name to your row or column definition, you can simply type the name of that row/column and MFractors code completion will insert the grid location:
+When defining a views location within the grid, you can simply type the name of that row/column and MFractors code completion will insert the grid location:
 
 ![Grid location IntelliSense](img/grid-location-intellisense.gif)
 
-In addition, you can also hover over a `Grid.Row` or `Grid.Column` property on a View and verify that it is in the right location:
+In addition, you can also hover over a `Grid.Row` or `Grid.Column` property on a view and verify that it is in the right location:
 
 ![Grid row tooltips](img/grid-tooltips.png)
 
