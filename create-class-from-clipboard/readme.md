@@ -27,9 +27,11 @@ To simplify this, MFractor now includes the `Add Class Using Clipboard` tool, al
 
 When a C# class is in the clipboard, the **Add Class Using Clipboard** will appear in the solution pads right click menu below the **Add** menu.
 
+**Using Add Class Using Clipboard Tool**
+
 ![The add class using clipboard feature](img/create-class-from-clipboard-1.png)
 
-This launches
+**The Add Class Using Clipboard Wizard**
 
 ![The add class using clipboard wizard](img/create-class-from-clipboard-2.png)
 
