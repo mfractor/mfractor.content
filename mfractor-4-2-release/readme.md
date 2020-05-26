@@ -14,10 +14,10 @@ Here is a quick rundown of what's included in the 4.2 release.
 
 ### Support For Latest Visual Studios
 
-I'm pleased to announce that the release of MFractor 4.2 to support Visual Studio Windows 16.6 and Visual Studio Mac 8.6. These releases target the latest stable version of each IDE and have been compiled and tested against them.
+I'm pleased to announce that the release of MFractor 4.2 to support Visual Studio Windows 16.6 and Visual Studio Mac 8.6. These releases officially target the latest stable version for each IDE, having been compiled and tested against them specifically.
 
 ### Serial Key Based Licensing
-MFractor Professional is now activated through a serial key! 🥳
+MFractor Professional can now be activated through a serial key! 🥳
 
 For the past few years, MFractor Professional has been activated via a license file attached to an email. This system worked well however it some issues like firewalls blocking our license emails, the fact it was easy to lose the license file and that it wasn't intuitive to activate your installation.
 
