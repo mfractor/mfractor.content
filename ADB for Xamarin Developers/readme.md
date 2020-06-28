@@ -3,12 +3,14 @@
 
 *Briefly descrbie ADB, paraphrasing Androids website. (https://developer.android.com/studio/command-line/adb/)*
 
-ADB, Android Debug Bridge, is a useful command line utility for interacting with Android devices for debugging and diagnostic purposes.
+Android Debug Bridge (ABD) is a useful command line utility for interacting with Android devices for debugging and diagnostic purposes.
 
 *How is it useful for Xamarin developers*
 Xamarin developers can use it to interact with their development devices to install packages, inspect running apps, push and pull files
 
 ## Accessing and using ADB on the command line
+
+As ADB is a command line utility
 
 Accessing the SDK command prompt from Visual Studio Windows and Mac.
 
@@ -34,20 +36,26 @@ We can view the output log of a running device using logcat: https://developer.a
 
 An overview of installing and uninstalling app.
 
- * adb install -> Install an APK from the local file system onto the device. This is useful for debugging release builds of your app!
+ * `adb install` -> Install an APK from the local file system onto the device. This is useful for debugging release builds of your app!
 
- * adb uninstall -> Uninstall an APK from the device using its package name. You can discover package names using ADB pm list packages (next
+ * `adb uninstall` -> Uninstall an APK from the device using its package name. You can discover package names using ADB pm list packages (next
 
- * adb pm (list packages) -> Lists all packages installed on the device
+ * `adb pm (list packages)` -> Lists all packages installed on the device
 
- * adb shell + run-as -> Start a shell session on the device and explore it's file system. Use run-as to change the shell sessions user to your app (all apps run as distinct linux users in Android) so that you can explore its bundle. EG: Use `cat` to print the contents of a the shared preferences file to the terminal output.
+## Inspecting The Content Of Your App
+
+ * `adb shell` + run-as -> Start a shell session on the device and explore it's file system. Use run-as to change the shell sessions user to your app (all apps run as distinct linux users in Android) so that you can explore its bundle. EG: Use `cat` to print the contents of a the shared preferences file to the terminal output.
 
 ### Copying files from a device
 
-https://developer.android.com/studio/command-line/adb#copyfiles
+ https://developer.android.com/studio/command-line/adb#copyfiles
 
- * adb pull -> Download a file from the device.
- * adb push -> Upload a file onto the device.
+  * adb pull -> Download a file from the device.
+  * adb push -> Upload a file onto the device.
+
+## Add ADB To Your Macs Terminal
+
+Throughout this article we've used Visual Studio mac
 
 ## Summary
 
