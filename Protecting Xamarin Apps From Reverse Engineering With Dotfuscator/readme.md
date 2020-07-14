@@ -1,10 +1,18 @@
 ## Introduction
 
+
+
 https://www.preemptive.com/products/dotfuscator/overview
 
 This article covers how to setup Dotfuscator on your Mac, how to integrate it into your app and what the end-result looks like.
 
 ## The Benefits Of Obfuscation
+
+One of the benefits of .NETs Intermeddiate Language (IL) is also one of its drawbacks;
+
+Obfuscation is the process of taking code and "scrambling" it to a
+
+When we compile a
 
 ## Install Dotfuscator Build Tools
 
@@ -34,11 +42,11 @@ Add the following content to the .dotfuscator.user.props file:
 </Project>
 ```
 
-Replace License key here with your license key and update the DotfuscatorMSBuildDir to point to the dotfuscator directory in your home directory. This
+Replace the `$license_key$` placholder with your license key and update the DotfuscatorMSBuildDir to point to the dotfuscator directory in your home directory. This configure
 
 ## Install Dotfuscator Nuget Package
 
-Add the local nuget package to all your projects by creating a folder named nuget in your repository, adding the dotfuscator nuget package to this fodler and then adding the following element to the Android and iOS projects msbuild content:
+Add the local nuget package to all your projects by creating a folder named nuget in your repository, adding the dotfuscator nuget package to this folder and then adding the following element to the Android and iOS projects msbuild content:
 
 ```
 <PackageReference Include="..\nuget\PreEmptive.Protection.Dotfuscator.Pro.Eval.6.0.1.nupkg" />
@@ -48,7 +56,7 @@ This will install the nuget package from a relative file path into your project.
 
 ## Integrate Dotfuscator Into Your App
 
-Finally, to activate dotFuscator in your builds, add the following content to the end of your Android and iOS projects:
+Finally, to activate Dotfuscator in your builds, add the following content to the end of your Android and iOS projects:
 
 ```
     <!-- Import environment-specific build properties for Dotfuscator, if they exist. -->
@@ -90,6 +98,14 @@ Finally, to activate dotFuscator in your builds, add the following content to th
 Findings:
 
  * Inner logic of methods is
+
+## Customising Obfuscation
+
+ * Overview of config file
+ * Using the config file editor on Windows.
+
+ * Excluding types/namespaces from control flow obfuscation.
+ * Excluding types/namespaces from type
 
 ## Summary
 
