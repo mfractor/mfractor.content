@@ -144,7 +144,7 @@ There are various flags you can pass to pm to get it to behave differently but t
 
 @matthew can you give an example of this, I'm not quite sure how to use this.
 
- * adb shell + run-as -> Start a shell session on the device and explore it's file system. Use run-as to change the shell sessions user to your app (all apps run as distinct linux users in Android) so that you can explore its bundle. EG: Use `cat` to print the contents of a the shared preferences file to the terminal output.
+ * `adb shell` + run-as -> Start a shell session on the device and explore it's file system. Use run-as to change the shell sessions user to your app (all apps run as distinct linux users in Android) so that you can explore its bundle. EG: Use `cat` to print the contents of a the shared preferences file to the terminal output.
 
 ### Copying files to and from a device
 

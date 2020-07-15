@@ -4,7 +4,7 @@ In Xamarin.Forms, one of the most powerful tools at our disposal is **Data Bindi
 
 This is accomplished using the `Binding` expression in XAML to specify the relationship and using the `INotifyPropertyChanged` interface.
 
-This article will dive into the usage of `INotifyPropertyChanged` and how we can then simplify it using Fody.PropertyChanged.
+This article will dive into the usage of `INotifyPropertyChanged` and how we can then simplify it with Fody.
 
 ## An Overview Of INotifyPropertyChanged
 
@@ -40,13 +40,11 @@ This can lead a few issues:
  * Properties that fire `PropertyChanged` require a backing field,
  * If we want to trigger other property changed events for a property, we must also manage that code in our
 
-In short, implementing `INotifyPropertyChanged` creates maintaince issues
+In short, implementing `INotifyPropertyChanged` creates maintainence issues
 
 To solve this maintainability cost, we can instead use Fody to automatically inject property changed events for our properties.
 
-
-
-Instead of using backing fields and triggering property events, we write normal properties and Fody automatically adds the changed events through a build process known as weaving. At a high level, Fody introduces a build task to post-process specified assembiles, modify their IL (the binary instructions in a .net DLL) to fire
+Instead of using backing fields and triggering property events, we write normal properties and Fody automatically adds the changed events through a build process known as weaving. At a high level, Fody introduces a build task to post-process specified assemblies, modify their IL (the binary instructions in a .net DLL) to fire
 
 basically, with a dab of magic we now get property changed
 
@@ -57,10 +55,9 @@ The concept of re-weaving is beyond the scope of this article
 ### Notifying Dependent Properties
 Say we have defined two properties, `Password` and `HasPassword`, where `HasPassword` is a null or empty check on `Password`.
 
-When `Password` is changed, we need a property changed event to be raised for `HasPassword` to implement this behavoiur.
+When `Password` is changed, we need a property changed event to be raised for `HasPassword` to implement this behaviour.
 
 This is where the real magic begins for Fody.
-
 
 How to use property changed?
 Simplifying property changed notifications by using Fody
