@@ -1,6 +1,6 @@
 ## Introduction
 
-
+As developers and business Xamarin apps gr
 
 https://www.preemptive.com/products/dotfuscator/overview
 
@@ -8,7 +8,7 @@ This article covers how to setup Dotfuscator on your Mac, how to integrate it in
 
 ## The Benefits Of Obfuscation
 
-One of the benefits of .NETs Intermeddiate Language (IL) is also one of its drawbacks;
+One of the benefits of .NETs Intermediate Language (IL) is also one of its drawbacks;
 
 Obfuscation is the process of taking code and "scrambling" it to a
 
@@ -42,11 +42,11 @@ Add the following content to the .dotfuscator.user.props file:
 </Project>
 ```
 
-Replace the `$license_key$` placholder with your license key and update the DotfuscatorMSBuildDir to point to the dotfuscator directory in your home directory. This configure
+Replace the `$license_key$` placholder with your license key and update the `DotfuscatorMSBuildDir` to point to the Dotfuscator directory in your home directory. This configure
 
 ## Install Dotfuscator Nuget Package
 
-Add the local nuget package to all your projects by creating a folder named nuget in your repository, adding the dotfuscator nuget package to this folder and then adding the following element to the Android and iOS projects msbuild content:
+Add the local nuget package to all your projects by creating a folder named nuget in your repository, adding the Dotfuscator nuget package to this folder and then adding the following element to the Android and iOS projects msbuild content:
 
 ```
 <PackageReference Include="..\nuget\PreEmptive.Protection.Dotfuscator.Pro.Eval.6.0.1.nupkg" />
