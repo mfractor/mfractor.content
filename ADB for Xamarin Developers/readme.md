@@ -2,6 +2,8 @@
 
 ADB, Android Debug Bridge, is a useful command line utility for interacting with Android devices for debugging and diagnostic purposes. Xamarin developers can use it to interact with their development devices to install/uninstall packages, inspect running apps, push and pull files and check error logs. 
 
+One of the main reasons to use ADB is to work out what's happening on your devices when things aren't going right. As .Net developers we're pretty lucky to have a fully featured debugger to help us solve a lot of problems but some issues appear outside of the debug cycle.
+
 ## Accessing and using ADB on the command line
 
 This article will assume you have Visual Studio 2019 for Mac or Visual Studio 2019 for Windows installed with the [Mobile development with .NET](https://docs.microsoft.com/en-us/xamarin/get-started/installation/windows) workload. We'll be accessing ADB from the SDK command prompt lunched from Visual Studio. If you want to run ADB on Linux, without Visual Studio or using the built in terminal additional configuration may be required but we won't cover that here. ADB can be downloaded as part of the [Android SKD Platform Tools](https://developer.android.com/studio/releases/platform-tools)
@@ -17,11 +19,9 @@ Once a terminal is open, type `adb` and hit enter. You should see a long list of
 ADB is a very powerful tools with a lot of commands, we'll focus on a few of the most useful commands that you'll want to use when developing Xamarin Android apps.
 
 ### Devices
-The first command you'll want to use is [Devices](https://developer.android.com/studio/command-line/adb#devicestatus). It displays a list of all Android devices that are currently connected. By passing in the `-l flag` it will give you more information to help you work out which device is which, instead of just showing a list of serials.
+The first command you'll want to use is [Devices](https://developer.android.com/studio/command-line/adb#devicestatus). It displays a list of all Android devices that are currently connected.
 
 ![result of running adb devices -l](img/devices-l.png)
-
-Most of the other commands in ADB will target one device at a time so if you have multiple devices connected you will have to pass this ID as an argument every time. I find it's generally easier to disconnect all but one device when I'm using ADB so it will automatically use the only device as the default.
 
 ### Install
 
@@ -53,7 +53,6 @@ The Android Activity Manager is used to start/stop and pass data between activit
 
 ![Running Android Activity Manager using asb shell](img/activitymanager.png)
 
-
 ### Push/Pull
 
 To transfer files to and from a device we use `adb push` and `adb pull`. These both require two parameters – the source and the destination.
@@ -62,16 +61,7 @@ e.g. `adb pull /sdcard/data.sql`
 
 ![Using push and pull to transfer files](img/pushpull.png)
 
-### Logcat
-
-Logcat is the Android utility for recording error logs, stack traces, events etc. In it's simplest form, Logcat can be run by calling `adb logcat` with no options but this will give you and incredibly detailed log that can be hard to follow. There are lots of additional options to filter the logs to make it easier to digest. While it is a part of adb, the [Android Documentation](https://developer.android.com/studio/command-line/logcat) has a separate page for logcat as it can almost be considered an Android utility in its own right.
-
-![Using logcat to see details of all activity on android device](img/logcat.gif)
-
-
 ## Inspecting Devices
-
-One of the main reasons to use ADB is to work out what's happening on your devices when things aren't going right. As .Net developers we're pretty lucky to have a fully featured debugger to help us solve a lot of problems but some issues appear outside of the debug cycle.
 
 The first step to inspecting devices will be to use the `adb devices` command as mentioned above.
 
@@ -124,8 +114,6 @@ e.g. `adb install /my/package.apk`
 
 ![installing an app using adb install](img/install.png)
 
-
-
  ### Uninstall
  If you're having problems with Visual Studio installing a new build to your device, even if you've deleted it, the uninstall command is the easiest way to make sure the app in completely gone
 
@@ -133,7 +121,7 @@ e.g. `adb uninstall com.mycompany.mypackagename,`
 
 ![uninstalling an app using adb uninstall](img/uninstall.png)
 
-### List of install packages
+### List of installed packages
 If you want a list all packages installed on your device, the `pm` (package manager) command, run using shell is the way to go.
 
 There are various flags you can pass to pm to get it to behave differently but the easiest way to get a useful out put is to run ` adb shell 'pm list packages -f'`. If you want to read a little more about other uses, there's a useful [gist by David Nunez](https://gist.github.com/davidnunez/1404789) with lots of good comments on it.
@@ -141,10 +129,26 @@ There are various flags you can pass to pm to get it to behave differently but t
 ![Listing packages from and Android device using pm](img/pm.png)
 
 ### Run-as
+Once you have an `adb shell` session open, your likely to want to look at the files in your app's sandbox but if you search around they're nowhere to be seen. This is because every android app runs as it's own user to protect the user's content from malicious code in other apps. `run-as` helps us out here by allowing you to `run` commands `as` if you were the app. This is similar to typing `sudo` which at a terminal makes you run-as the administrator.
 
-@matthew can you give an example of this, I'm not quite sure how to use this.
+I use Xamarin.Essentials.Preferences in a lot of my apps to store some basic user settings. On android this is implemented using a shared_prefs file. Let's crack my app open and take a look. We'll start by starting an adb shell session.
+![Running adb shell in a terminal](img/shellsmall.png)
 
- * `adb shell` + run-as -> Start a shell session on the device and explore it's file system. Use run-as to change the shell sessions user to your app (all apps run as distinct linux users in Android) so that you can explore its bundle. EG: Use `cat` to print the contents of a the shared preferences file to the terminal output.
+This give me a command prompt on my android. Now I'll run `run-as` with my package name.
+
+![Running run-as in an adb-shell](img/runas.png)
+
+My prompt now includes the package name to show that we are running as the app. As a quick test, running `ls` will show you the folders the app uses.
+
+![Using ls to show the folders the app uses](img/runasls.png)
+
+I can now use cat to print out the contents of my shared_prefs.
+
+![Cat prints out the contents of my shared_prefs in the terminal](img/sharedprefs.png)
+
+As you can see, this app only has one preference in it and the user has decided to turn off analytics.
+
+For security's sake, this can only be done on debug builds, although you can get around this with rooted devices so shared_prefs is not an appropriate place to store sensitive data.
 
 ### Copying files to and from a device
 
