@@ -6,7 +6,7 @@ One of the main reasons to use ADB is to work out what's happening on your devic
 
 ## Accessing and using ADB on the command line
 
-This article will assume you have Visual Studio 2019 for Mac or Visual Studio 2019 for Windows installed with the [Mobile development with .NET](https://docs.microsoft.com/en-us/xamarin/get-started/installation/windows) workload. We'll be accessing ADB from the SDK command prompt lunched from Visual Studio. If you want to run ADB on Linux, without Visual Studio or using the built in terminal additional configuration may be required but we won't cover that here. ADB can be downloaded as part of the [Android SKD Platform Tools](https://developer.android.com/studio/releases/platform-tools)
+This article will assume you have Visual Studio 2019 for Mac or Visual Studio 2019 for Windows installed with the [Mobile development with .NET](https://docs.microsoft.com/en-us/xamarin/get-started/installation/windows) workload. We'll be accessing ADB from the SDK command prompt lunched from Visual Studio. If you want to run ADB on Linux, without Visual Studio or using the built in terminal additional configuration may be required but we won't cover that here. ADB can be downloaded as part of the [Android SKD Platform Tools](https://developer.android.com/studio/releases/platform-tools).
 
 To access ADB:
  - Windows: Click Tools -> Android -> Android Adb Command Prompt...
@@ -25,7 +25,7 @@ The first command you'll want to use is [Devices](https://developer.android.com/
 
 ### Install
 
-To install an APK from your computer onto a device you can use the  [Install](https://developer.android.com/studio/command-line/adb#move) command. This is really useful for testing release buildings or 
+To install an APK from your computer onto a device you can use the  [Install](https://developer.android.com/studio/command-line/adb#move) command. This is really useful for testing archives before publishing and releases built on continuous integration services.
 
 To install a package you will need to pass it the file path of the APK.
 
@@ -79,7 +79,7 @@ Now we can work out which serial matches my Pixel 3a and which matches my Samsun
 
 For most ADB commands you will only want to target one device. When multiple devices are connected this means passing the device serial in each command. To keep things simple I typically disconnect all but one device to avoid confusion and to prevent re-entering the serial every time.
 
-Once we've got our device showing in adb we can view the output log of a running device using [Logcat](https://developer.android.com/studio/command-line/logcat)
+Once we've got our device showing in adb we can view the output log of a running device using [Logcat](https://developer.android.com/studio/command-line/logcat).
 
 Logcat outputs the logs from a device to gain insight into what's happening. This is particularly useful for debugging issues that only appear in release/production builds of your Android app. 
 
@@ -91,7 +91,6 @@ e.g. `adb logcat`
 
 The output of logcat is much easier to digest if you store it in a file. The quickest way to do this is to add `>` and a file name. Once logcat has run you can then open in your text editor of choice to search at scroll at your leisure.
 
-
 While logcat is running you may want to try launching your app, or performing what ever action you're trying to debug. When you're ready press ctrl+c to stop logging and you can open the file.
 
 E.g. `adb logcat > myFile.log`
@@ -99,7 +98,6 @@ E.g. `adb logcat > myFile.log`
 ![Storing the output of log cat in a file](img/logtxt.gif)
 
 The output of logcat can also be accessed in Visual Studio by opening the Device Log Pad. This makes it easy to choose which device you want to watch from a drop down menu and offers filtering options. The device logs tab also shows iOS device logs which aren't access via ADB and would otherwise require you to use Xcode.
-5.1
 
 ![Using device logs in VS Mac to view Android Log Cat](img/vsmaclogcat.png)
 
@@ -108,16 +106,16 @@ The output of logcat can also be accessed in Visual Studio by opening the Device
 Managing applications installed on an Android can usually be managed from the Android UI, with your apps deployed for debugging using the IDE. There are a few advanced situations where using ADB can give you more options or get you out of a tight spot.
 
 ### Installing
-The main reason I tend to use adb install is if I have a release build that I want to test before uploading to the Google Play Store. It's such a pain when you get rejected from the store because the app crashes on launch and they don't accept "the debug build works on my phone" as an excuse
+The main reason I tend to use adb install is if I have a release build that I want to test before uploading to the Google Play Store. It's such a pain when you get rejected from the store because the app crashes on launch and they don't accept "the debug build works on my phone" as an excuse.
 
 e.g. `adb install /my/package.apk`
 
 ![installing an app using adb install](img/install.png)
 
  ### Uninstall
- If you're having problems with Visual Studio installing a new build to your device, even if you've deleted it, the uninstall command is the easiest way to make sure the app in completely gone
+ If you're having problems with Visual Studio installing a new build to your device, even if you've deleted it, the uninstall command is the easiest way to make sure the app in completely gone.
 
-e.g. `adb uninstall com.mycompany.mypackagename,`
+e.g. `adb uninstall com.mycompany.mypackagename`
 
 ![uninstalling an app using adb uninstall](img/uninstall.png)
 
@@ -132,6 +130,7 @@ There are various flags you can pass to pm to get it to behave differently but t
 Once you have an `adb shell` session open, your likely to want to look at the files in your app's sandbox but if you search around they're nowhere to be seen. This is because every android app runs as it's own user to protect the user's content from malicious code in other apps. `run-as` helps us out here by allowing you to `run` commands `as` if you were the app. This is similar to typing `sudo` which at a terminal makes you run-as the administrator.
 
 I use Xamarin.Essentials.Preferences in a lot of my apps to store some basic user settings. On android this is implemented using a shared_prefs file. Let's crack my app open and take a look. We'll start by starting an adb shell session.
+
 ![Running adb shell in a terminal](img/shellsmall.png)
 
 This give me a command prompt on my android. Now I'll run `run-as` with my package name.
@@ -180,4 +179,4 @@ ADB let's you take control of you Android device and see what's going on inside.
 
 ## Resources
 * [ADB Documentation](https://developer.android.com/studio/command-line/adb/)
-* [Android Wi-Fi Debugging with ADB and Xamarin Visual Studio](https://www.andrewhoefling.com/Blog/Post/android-wi-fi-debugging-with-adb-android-device-bridge-and-xamarin-visual-studio) by Andrew Hoefling
+* [Android Wi-Fi Debugging with ADB and Xamarin Visual Studio](https://www.andrewhoefling.com/Blog/Post/android-wi-fi-debugging-with-adb-android-device-bridge-and-xamarin-visual-studio) by Andrew Hoefling.
