@@ -10,8 +10,6 @@ Xamarin.Forms is a beloved by thousands of developers around the globe by its po
 
 This is the mindset that drove the features of MFractor for Xamarin.Forms developers. This tooling enhances your development experience by adding hundreds of Code Analysis and Code Actions for editing XAML files, shortcuts to navigate around your code, wizards for adding Fonts and Value Converters and tooltips and adornments to enhance your edit and Intellisense experience.
 
-Let's take a look of some of these features!  
-
 ### Fix XAML Bugs Instantly
 
 XAML is a powerful language for describing your UI. Yet, most its features are built on top XML and are "loosely" joint. This is the case of Resource Dictionaries, a feature that allow us to declare shared resources that are referenced by a string key. Sometimes though we may have typos that will only be found when the app crashes at runtime 🤯...
@@ -20,15 +18,25 @@ MFractor to the rescue! The static resource analysis will check every reference 
 
 ![](img/style-tooltip.png)
 
-![](img/image-intellisense-tooltip.png)
+Notice that a very descriptive message is shown on the tooltip, but also, you have a few available fixes. MFractor is smart enought to figure if you may have done a typo, and suggest resources with similar names.
 
-XAML is a powerful language for describing your UI, with features like Styles, Behaviors, Triggers and Markup Expressions, that allows the magical Data-Binding stuff to happen. MFractor add several features to facilitate writing all this stuff, while running lots of diagnostics tools to identify potential issues your code.
+But notice also that the resource in question is a style, an important part of UI composition that gets special attention on MFractor. One of the available fixes allows you to easily create a new style from the element, enters the Extract Style feature, a Wizard that allows you to quickly extract properties of current element into a style to be placed on the current file or in the project-wide `App.xaml` dictionary.
 
-Let's take Style references for instance. When applying a style to a element such as a Label, you may have typos that would only be catch at runtime (or even not catch at all!) 
+![](img/extract-style.png)
 
-while applying the MVVM pattern to separate design from behaviors. It comes packed with features such as Markup Extensions, that allow the loved Binding Expressions to exist, among several other interesting tools.
+The Extract XAML Style is a powerful tool to create styles from properties of existing elements. In the example above you can create a new style based on the properties of that Label. You can even change those properties or add new ones, and the right-pane preview allows you to check exactly what changes MFractor will make to your code.
 
+Data-binding is a huge part of Forms development, and MFractor also keeps you covered. When writing a binding-expression, intellisense is enhanced to add all the properties available on the Binding Context:
 
+![](img/binding-intellisense.png)
+
+Similar with Resources, Bindings are checked against the context to prevent errors that would only be catch at runtime, such as typos on the properties names:
+
+![](img/binding-fix.png)
+
+It may be a simple typo and once again you can replace with the correct name, but notice you can also generate a new property with the name of the binding expression directly from the fixes on the tooltip. This is very effortless and time saving!
+
+Those are only a few examples of how MFractor can help you fix issues in your XAML, but there's much, much more. Check out our feature matrix for [XAML Code Actions](https://docs.mfractor.com/feature-matrix/#xaml-code-actions) and [XAML Code Analysis](https://docs.mfractor.com/feature-matrix/#xaml-code-analysis), there are hundreds of checks and actions available.
 
 ### Cleanup Your XAML
 
@@ -74,6 +82,7 @@ Mobile developers have to leave coding from time to time to import and manage th
 Developers love coding, but its inevitable to deal with images in a Mobile project. MFractor strives to made image management simple and straightforward, so you can focus on your coding while integrate designers work into your project effortless. 
 
 
+![](img/image-intellisense-tooltip.png)
 
 
 
@@ -82,3 +91,5 @@ Developers love coding, but its inevitable to deal with images in a Mobile proje
 MFractor is available as an extension of Visual Studio for Windows and Mac with almost all features available in both platforms, being one of the first cross-platform productivity extension for developers. By unleashing the full power of the Professional edition, you can use a single license for either environments. 
 
 ## Summary
+
+MFractor is an extension for Visual Studio that adds 200+ features to enhance your mobile development productivity. Check out our Feature Matrix to see everything that we can do for you.
