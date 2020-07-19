@@ -30,23 +30,31 @@ Data-binding is a huge part of Forms development, and MFractor also keeps you co
 
 ![](img/binding-intellisense.png)
 
-Similar with Resources, Bindings are checked against the context to prevent errors that would only be catch at runtime, such as typos on the properties names:
+Similar to Resources, Bindings are checked against the context to prevent errors that would only be catch at runtime, such as typos on the properties names:
 
 ![](img/binding-fix.png)
 
 It may be a simple typo and once again you can replace with the correct name, but notice you can also generate a new property with the name of the binding expression directly from the fixes on the tooltip. This is very effortless and time saving!
 
-Those are only a few examples of how MFractor can help you fix issues in your XAML, but there's much, much more. Check out our feature matrix for [XAML Code Actions](https://docs.mfractor.com/feature-matrix/#xaml-code-actions) and [XAML Code Analysis](https://docs.mfractor.com/feature-matrix/#xaml-code-analysis), there are hundreds of checks and actions available.
-
 ### Cleanup Your XAML
 
 Designing your UI with XAML in one of the strongest(?!) features of Xamarin.Forms projects. Although being very powerful, XAML may become messy if we don't manage the dependencies. MFractor introduces several Code Analysis tools that helps you identifying how to simplify and cleanup your XAML code. 
 
-Take for instance values that are declared repeteadly throughout the project, such as Thicknesses. With the thickness analysis MFractor constantly check all `Margin` and `Padding` property declarations to identify duplications. Green squiggles will be shown to indicate it, but the interesting part is hovering it, take a look at the tooltip:  
+Take for instance values that are declared repeatedly throughout the project, such as Thicknesses. With the thickness analysis MFractor constantly check all `Margin` and `Padding` property declarations to identify duplications. Green squiggles will be shown to indicate it, but the interesting part is hovering it, take a look at the tooltip:  
 
 ![](img/thickness-consolidation.png)
 
 With just a click you can view all the usages of that thickness or consolidate all thickness declarations of the same value with a Static Resource, a nice and quick you to clean up your code!
+
+As we said before, styles are first-class citizens to MFractor, for this reason we try to ease its usage with features like [Matching Style Analysis](https://docs.mfractor.com/xamarin-forms/working-with-styles/matching-style-analysis/#applying-a-matching-style), that constantly analyzes your elements against the declared styles to find a fit. Applying the matching style instantly simplifies the element declaration:
+
+ ![](img/apply-style.gif)
+ 
+ A new feature brought recently to Xamarin.Forms is the simplified Grid Rows and Columns declaration. Your projects probably already have several Grid declarations with the traditional style. With a simple click you can convert your declarations to the new format:
+
+![](img/convert-grid.gif)
+
+Those are only a few examples of how MFractor can help you fix issues and clean-up your XAML code, but there's much, much more. Check out our feature matrix for [XAML Code Actions](https://docs.mfractor.com/feature-matrix/#xaml-code-actions) and [XAML Code Analysis](https://docs.mfractor.com/feature-matrix/#xaml-code-analysis), there are hundreds of checks and actions available.
 
 ### Ready for MVVM
 
