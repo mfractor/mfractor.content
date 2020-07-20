@@ -80,20 +80,13 @@ Every modern and engaging app has several assets to compose its layouts. Adding 
 
 ![](img/image-importer.png)
 
-Using the importer is as simple as browsing your image and clicking _Import Image_, most of the defaults will suffice for most projects. But importing is just the start! MFractor also 
-
-
+Using the importer is as simple as browsing your image and clicking _Import Image_, most of the defaults will suffice for most projects. But importing is just the start! MFractor also brings the **Image Asset Manager**, a centralized location to easily manage the image assets on your mobile solution.
 
 ![](img/image-asset-manager.png)
 
-Mobile developers have to leave coding from time to time to import and manage the assets of its product, a required yet time consuming and error prone task.  
+Presented as a handy tool window, you can browse through all images smartly grouped. The bottom right panel allows you to check in which projects this image is added and all its densities. The preview pane allows you to quickly check important metadata such as its size and dimensions. You can also optimise images individually or in batch using TinyPNG or delete an entire image set with a single click.
 
-Developers love coding, but its inevitable to deal with images in a Mobile project. MFractor strives to made image management simple and straightforward, so you can focus on your coding while integrate designers work into your project effortless. 
-
-
-![](img/image-intellisense-tooltip.png)
-
-
+ 
 
 ## Choose Your IDE
 
