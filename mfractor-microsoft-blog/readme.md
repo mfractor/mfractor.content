@@ -1,8 +1,9 @@
+
 ## Introduction
+MFractor is a popular Visual Studio extension among macOS Xamarin developers,
+ beloved by its powerful features to enhance Mobile Development workflow. After years of intense development, its finally debuted on **Visual Studio Windows**, bringin all of its powerful features to Windows developers.
 
-Sometime around the year 2016 Matthew Robins, a talented mobile developer, felt that Xamarin Studio, the main IDE for developing Xamarin apps on mac systems, was severely lacking productivty features for the mobile workflows. **MFractor**, a contraction of the _Mono Refactor_ name, has born to a few years later became one of the most powerful productivity toolbox for Xamarin and .NET developers.
-
-On this post we'll get to know MFractor, what it is and how it can boost your productivity as a mobile developer for the Xamarin platform, by leveraging tools that you already used to with features carefuly thought for mobile developers.
+On this post we'll take a look at **MFractor for Windows** and how it can boost your productivity as a Xamarin and .NET developer. 
 
 ## Powerful Tools For Xamarin.Forms Developers
 
