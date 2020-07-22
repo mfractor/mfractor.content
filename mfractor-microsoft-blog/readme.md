@@ -1,7 +1,9 @@
 
 ## Introduction
 [MFractor](https://www.mfractor.com) is a popular Visual Studio extension among macOS Xamarin developers,
- beloved by its powerful features to enhance Mobile Development workflow. After years of intense development, its finally debuted on **Visual Studio Windows**, bringin all of its powerful features to Windows developers.
+ beloved by its powerful features to enhance Mobile Development workflow. After years of intense development, its finally debuted on **Visual Studio for Windows**, bringin all of its powerful features to Windows developers.
+
+![](img/logo-horizontal.png)
 
 On this post we'll take a look at [**MFractor for Windows**](https://marketplace.visualstudio.com/items?itemName=MFractorPtyLtd.MFRACTOR-VS-WINDOWS) and how it can boost your productivity as a Xamarin and .NET developer. 
 
@@ -9,7 +11,7 @@ On this post we'll take a look at [**MFractor for Windows**](https://marketplace
 
 Xamarin.Forms is beloved by developers around the globe for its powerful cross-platform capabilities. Once being a tool for prototyping simple commercial apps, Forms has become a full-featured platform for mobile development. Powerful platforms demands powerful tooling, so we can extract the most with less effort.
 
-This is the mindset that drove the features of MFractor for Xamarin.Forms developers. This tooling enhances your development experience by adding hundreds of Code Analysis and Code Actions for editing XAML files, shortcuts to navigate around your code, wizards for adding Fonts and Value Converters and tooltips and adornments to enhance your edit and Intellisense experience.
+This is the mindset that drove the features of MFractor for Xamarin.Forms developers. This tooling enhances your development experience by adding hundreds of [Code Analysis](https://docs.mfractor.com/feature-matrix/#xaml-code-analysis) and [Code Actions](https://docs.mfractor.com/feature-matrix/#xaml-code-actions) for editing XAML files, [shortcuts to navigate around your code](), wizards for adding [Fonts](https://docs.mfractor.com/fonts/importing-fonts/) and [Value Converters](https://docs.mfractor.com/xamarin-forms/value-converters/value-converter-wizard/) and tooltips and adornments to enhance your edit and Intellisense experience.
 
 ### Ready for MVVM
 
