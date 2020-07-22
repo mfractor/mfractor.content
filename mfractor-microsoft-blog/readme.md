@@ -53,6 +53,12 @@ Similar to Resources, [Bindings are checked against the context](https://docs.mf
 
 It may be a simple typo and once again you can replace with the correct name, but notice you can also generate a new property with the name of the binding expression directly from the fixes on the tooltip. This is very effortless and time saving!
 
+Working with Grids is sometimes confusing when setting rows, columns and spans, which may render unexpect results on the layout. The [Grid Analysis](https://docs.mfractor.com/xamarin-forms/grids/analysis/) adds several checks for `Grid.Row`, `Grid.Column`, `Grid.RowSpan` and `Grid.ColumnSpan`. In the following sample the analyzer alerts for an element that is being declared to a third column that is no part of the definitions:
+
+![](img/grid-analysis-bounds.png)
+
+Similar checks are made to row and column spans, so you can easily know if a span goes of the bounds. Those kind of checks are simple but saves a lot of time designing layouts.
+
 ### Cleanup Your XAML
 
 Designing your UI with XAML is one of the strongest features of Xamarin.Forms. Although being very powerful, XAML may become messy if we don't manage the dependencies. MFractor introduces several [Code Analysis tools](https://docs.mfractor.com/feature-matrix/#code-analysis) that helps you identifying how to simplify and cleanup your XAML code. 
@@ -83,7 +89,7 @@ With a few clicks you can transform this color declaration on a local or project
 
 ![](img/convert-grid.gif)
 
-Those are only a few examples of how MFractor can help you fix issues and clean-up your XAML code, but there's much, much more. Check out our feature matrix for [XAML Code Actions](https://docs.mfractor.com/feature-matrix/#xaml-code-actions) and [XAML Code Analysis](https://docs.mfractor.com/feature-matrix/#xaml-code-analysis), there are hundreds of checks and actions available.
+Those are only a few examples of how MFractor can help you fix issues and clean-up your XAML code, but there's much, much more! Check out our feature matrix for [XAML Code Actions](https://docs.mfractor.com/feature-matrix/#xaml-code-actions) and [XAML Code Analysis](https://docs.mfractor.com/feature-matrix/#xaml-code-analysis), there are hundreds of checks and actions available.
 
 
 ## Image Management Simplified
@@ -108,4 +114,4 @@ MFractor is available as an extension of Visual Studio for Windows and Mac with 
 
 ## Summary
 
-MFractor is an extension for Visual Studio that adds 200+ features to enhance your mobile development productivity. Check out our [Feature Matrix](https://docs.mfractor.com/feature-matrix/) to see everything that we can do for you. You can also reach us at (add links to our social networks?) and give your feedbacks at ().
+In this post we presented MFractor, a very stable and mature extension Visual Studio that made its way on to Windows, with 200+ features to greatly enhance development experience. This overview shows only a few of the powerful tools provided by the product. Check out our [Feature Matrix](https://docs.mfractor.com/feature-matrix/) to see everything that we can do for you. You can also reach us at (add links to our social networks?) and give your feedbacks at ().
