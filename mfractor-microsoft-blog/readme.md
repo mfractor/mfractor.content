@@ -66,6 +66,18 @@ With just a click you can view all the usages of that thickness or [consolidate 
 As we said before, styles are first-class citizens to MFractor, for this reason we try to ease its usage with features like [Matching Style Analysis](https://docs.mfractor.com/xamarin-forms/working-with-styles/matching-style-analysis/#applying-a-matching-style), that constantly analyzes your elements against the declared styles to find a fit. Applying the matching style instantly simplifies the element declaration:
 
  ![](img/apply-style.gif)
+
+Similar checks are made with colors. If we find that a hard-coded hex value is already declared on a Static Resource:
+
+![](img/color-exists.png)
+
+Or maybe you've just added a new color to you project and want to made it available to your project. Notice that if you place your cursor over an color declaration the screwdriver icon will appear on the left to let you know there are options available. Click there to check all the actions that MFractor adds:
+
+![](img/color-actions.png)
+
+With a few clicks you can transform this color declaration on a local or project-wide resource. You can also quickly add an alpha channel to this declaration or even edit it inline using the Color Picker:
+
+![](img/color-picker.png)
  
  A new feature brought recently to Xamarin.Forms is the [simplified Grid Rows and Columns declaration](https://docs.mfractor.com/xamarin-forms/grids/shorthand-declaration-refactorings/). Your projects probably already have several Grid declarations with the traditional style. With a simple click you can convert your declarations to the new format:
 
@@ -73,17 +85,22 @@ As we said before, styles are first-class citizens to MFractor, for this reason 
 
 Those are only a few examples of how MFractor can help you fix issues and clean-up your XAML code, but there's much, much more. Check out our feature matrix for [XAML Code Actions](https://docs.mfractor.com/feature-matrix/#xaml-code-actions) and [XAML Code Analysis](https://docs.mfractor.com/feature-matrix/#xaml-code-analysis), there are hundreds of checks and actions available.
 
+
 ## Image Management Simplified
 
-Every modern and engaging app has several assets to compose its layouts. Adding images to projects is tedious and error prone. MFractor brings the Image Importer, a powerful tool that adds an image to all the required projects of your solution, giving it's correct names and resizing as required, freeing you from the complexity of dealing with densities and buckets.
+Every modern and engaging app has several assets to compose its layouts. Adding images to projects is tedious and error prone. MFractor brings the [**Image Importer**](https://docs.mfractor.com/image-management/image-importer/), a powerful tool that adds an image to all the required projects of your solution, giving it's correct names and resizing as required, freeing you from the complexity of dealing with densities and buckets.
 
 ![](img/image-importer.png)
 
-Using the importer is as simple as browsing your image and clicking _Import Image_, most of the defaults will suffice for most projects. But importing is just the start! MFractor also brings the **Image Asset Manager**, a centralized location to easily manage the image assets on your mobile solution.
+Using the importer is as simple as browsing your image and clicking _Import Image_, most of the defaults will suffice for most projects. But importing is just the start! MFractor also brings the [**Image Asset Manager**](https://docs.mfractor.com/image-management/image-importer/), a centralized location to easily manage the image assets on your mobile solution.
 
 ![](img/image-asset-manager.png)
 
-Presented as a handy tool window, you can browse through all images smartly grouped. The bottom right panel allows you to check in which projects this image is added and all its densities. The preview pane allows you to quickly check important metadata such as its size and dimensions. You can also optimise images individually or in batch using TinyPNG or delete an entire image set with a single click.
+Presented as a handy tool window, you can browse through all images smartly grouped. The bottom right panel allows you to check in which projects this image is added and all its densities. The preview pane allows you to quickly check important metadata such as its size and dimensions. You can also optimise images individually or in batch using TinyPNG.
+
+[Deleting image assets](https://docs.mfractor.com/image-management/deleting-image-assets/) always leave its traces. With the delete button MFractor will scan every file associated with that asset and clean everything up. You can also select individual images to delete from that asset, like old unused densities:
+
+ ![](img/image-delete.png)
 
 ## Choose Your IDE
 
@@ -91,4 +108,4 @@ MFractor is available as an extension of Visual Studio for Windows and Mac with 
 
 ## Summary
 
-MFractor is an extension for Visual Studio that adds 200+ features to enhance your mobile development productivity. Check out our Feature Matrix to see everything that we can do for you.
+MFractor is an extension for Visual Studio that adds 200+ features to enhance your mobile development productivity. Check out our [Feature Matrix](https://docs.mfractor.com/feature-matrix/) to see everything that we can do for you. You can also reach us at (add links to our social networks?) and give your feedbacks at ().
