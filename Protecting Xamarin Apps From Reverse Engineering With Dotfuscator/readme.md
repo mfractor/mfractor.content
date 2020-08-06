@@ -54,6 +54,8 @@ Add the local nuget package to all your projects by creating a folder named nuge
 
 This will install the nuget package from a relative file path into your project.
 
+Alternatively, you can host the Dotfuscator nuget
+
 ## Integrate Dotfuscator Into Your App
 
 Finally, to activate Dotfuscator in your builds, add the following content to the end of your Android and iOS projects:
@@ -65,30 +67,28 @@ Finally, to activate Dotfuscator in your builds, add the following content to th
   <!-- Set build properties for Dotfuscator. -->
   <PropertyGroup>
 
-    <!-- Generate a default Dotfuscator config file (DotfuscatorConfig.xml) if it doesn't exist. -->
-    <DotfuscatorGenerateConfigFileIfMissing>true</DotfuscatorGenerateConfigFileIfMissing>
-
-    <!-- Enable Dotfuscator for Release builds. -->
-    <DotfuscatorEnabled Condition="'$(Configuration)' == 'Debug'">true</DotfuscatorEnabled>
-
-    <!-- Enable Dotfuscator for Release builds. -->
     <DotfuscatorEnabled Condition="'$(Configuration)' == 'Release'">true</DotfuscatorEnabled>
 
-    <!-- Enable Dotfuscator for Ad-Hoc builds (only needed for iOS). -->
+    <!-- Enable Dotfuscator iOS Ad-Hoc and AppStore builds. -->
     <DotfuscatorEnabled Condition="'$(Configuration)' == 'Ad-Hoc'">true</DotfuscatorEnabled>
-
-    <!-- Enable Dotfuscator for AppStore builds (only needed for iOS). -->
     <DotfuscatorEnabled Condition="'$(Configuration)' == 'AppStore'">true</DotfuscatorEnabled>
-
-    <!-- Only needed when using Tamper Checks for Android. -->
-    <!-- TODO: If using Tamper Checks for Android, set this to the SHA-1 fingerprint of the certificate used to sign the app. -->
-    <DotfuscatorAndroidSigningCertFingerprint></DotfuscatorAndroidSigningCertFingerprint>
 
   </PropertyGroup>
 
   <!-- Import the Dotfuscator MSBuild targets. Must be done last. -->
   <Import Project="$(DotfuscatorMSBuildDir)\PreEmptive.Dotfuscator.Common.targets" />
 ```
+
+## Obfuscation Configuration
+
+
+## Obfuscation Customisation
+
+ * Overview of config file
+ * Using the config file editor on Windows.
+
+ * Excluding types/namespaces from control flow obfuscation.
+ * Excluding types/namespaces from type
 
 ## Obfuscation Result
 
@@ -97,15 +97,8 @@ Finally, to activate Dotfuscator in your builds, add the following content to th
 
 Findings:
 
- * Inner logic of methods is
+* Inner logic of methods is
 
-## Customising Obfuscation
-
- * Overview of config file
- * Using the config file editor on Windows.
-
- * Excluding types/namespaces from control flow obfuscation.
- * Excluding types/namespaces from type
 
 ## Summary
 
