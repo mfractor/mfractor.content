@@ -20,9 +20,9 @@ Put you caret next to an open `{` or close `}`, you'll see that the brace is hig
 ![Using go to matching brace](img/go-to-matching-brace.gif)
 
 ## Edit Project File – `Right click on project and Edit Project File`
-Sometimes we need to open our project files (.csproj), maybe to change some Nuget versions or tinker with some hidden configurations. You used to have to go out to the finder and dig around to open it in a text editor, and even once you found it `.csproj`s were scary and editing a live file could get weird.
+Sometimes we need to open our project files (.csproj), maybe to change some Nuget versions or tinker with some hidden configurations. You used to have to go out to the finder and dig around to open it in a text editor, and even once you found it, `.csproj`s were scary and editing a live file could get weird.
 
-But project files are getting simpler and IDEs are getting smarter. XML is fun again! Right click the project and click `Edit Project File` and you're up and running.
+Project files are getting simpler and IDEs are getting smarter. XML is fun again! Right click the project and click `Edit Project File` and you're up and running.
 
 ![Accessing the edit project file feature](img/edit-project-file.png)
 
@@ -34,7 +34,7 @@ Global search allows you to search for files, classes, methods, IDE features, Nu
 To use it, press `Command + .` and start typing. There's a pretty good chance it will find what you're looking for and suggest it as the top result or not far below. If not the select `Search in Solution...` and it will find all result and show them in the Search Results pad.
 
 ### Search Files
-By typing in ".xaml" it finds my App.xaml as the first result and then suggests other xaml files.
+By typing in ".xaml" it finds my `App.xaml` as the first result and then suggests other xaml files.
 
 ![Global search by file extension](img/global-search-xaml.png)
 
