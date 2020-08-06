@@ -12,7 +12,7 @@ To help you discover these navigation shortcuts, MFractor now includes "navigati
 
 For example, if you hover over a binding expression, you can use the **Navigate To Binding Context Property** link to jump to the referenced property on the view model:
 
-![Navigate to binding context property](img/navigate-to-binnding-context.png)
+![Navigate to binding context property](img/navigate-to-binding-context.png)
 
 Or, hover over a static resource and use the **Navigate To Static Resource** link to jump to the static resource declaration:
 
