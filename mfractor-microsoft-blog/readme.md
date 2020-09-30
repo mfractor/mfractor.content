@@ -1,19 +1,21 @@
 
 ## Introduction
-[MFractor](https://www.mfractor.com) is a popular Visual Studio Mac extension among Xamarin developers,
- beloved for its powerful mobile development tools. After years of intense development, its finally debuted on **Visual Studio for Windows**, bringing its powerful features to Visual Studio Windows.
 
-In this post we'll take a look at [**MFractor for Windows**](https://marketplace.visualstudio.com/items?itemName=MFractorPtyLtd.MFRACTOR-VS-WINDOWS) and how it can boost your productivity as a Xamarin and .NET developer.
+[MFractor](https://www.mfractor.com) is a Visual Studio Mac extension popular among Xamarin developers for its powerful mobile development tools. After years of development, it is now available for Visual Studio Windows!
+
+In this post we'll dive into [**MFractor for Windows**](https://marketplace.visualstudio.com/items?itemName=MFractorPtyLtd.MFRACTOR-VS-WINDOWS) to discover how it can boost your productivity as a Xamarin developer.
 
 ## Powerful Tools For Xamarin.Forms Developers
 
-Xamarin.Forms is beloved by developers around the globe for its powerful cross-platform capabilities. Once being a tool for prototyping simple commercial apps, Forms has become a full-featured platform for mobile development. Powerful platforms demands powerful tooling, so we can extract the most with less effort.
+Using Xamarin.Forms, developers and businesses can build beautiful applications in .NET for Android, iOS and Windoes from a single codebase.  is loved by developers for its powerful cross-platform capabilities, Powerful platforms demands powerful tooling, so we can extract the most with less effort.
 
 This is the mindset that drove the features of MFractor for Xamarin.Forms developers. This tooling enhances your development experience by adding hundreds of [Code Analysis](https://docs.mfractor.com/feature-matrix/#xaml-code-analysis) and [Code Actions](https://docs.mfractor.com/feature-matrix/#xaml-code-actions) for editing XAML files, [shortcuts to navigate around your code](), wizards for adding [Fonts](https://docs.mfractor.com/fonts/importing-fonts/) and [Value Converters](https://docs.mfractor.com/xamarin-forms/value-converters/value-converter-wizard/) and tooltips and adornments to enhance your edit and Intellisense experience.
 
 ### Made for MVVM
 
-The Model-View-ViewModel pattern is the de-factor standard for Xamarin Developers and MFractor enabling developers to build . used on Forms projects and
+The Model-View-ViewModel pattern is the de-factor standard for Xamarin.Forms. With it, we can leverage data-binding in XAML to
+
+
 
 MFractor make it really easy to work with it by adding handful features such as the MVVM Navigation, Wizard, Intellisense and several code actions.
 
@@ -95,7 +97,6 @@ With a few clicks you can transform this color declaration on a local or project
 
 Those are only a few examples of how MFractor can help you fix issues and clean-up your XAML code, but there's much, much more! Check out our feature matrix for [XAML Code Actions](https://docs.mfractor.com/feature-matrix/#xaml-code-actions) and [XAML Code Analysis](https://docs.mfractor.com/feature-matrix/#xaml-code-analysis), there are hundreds of checks and actions available.
 
-
 ## Simplified Image Management
 
 Every modern and engaging app has several assets to compose its layouts. Adding images to projects is tedious and error prone. MFractor brings the [**Image Importer**](https://docs.mfractor.com/image-management/image-importer/), a powerful tool that adds an image to all the required projects of your solution, giving it's correct names and resizing as required, freeing you from the complexity of dealing with densities and buckets.
@@ -114,8 +115,8 @@ Presented as a handy tool window, you can browse through all images smartly grou
 
 ## Choose Your IDE
 
-MFractor is available for both Visual Studio for Windows and Mac, being one of the first cross-platform productivity extension for developers. By unleashing the full power of the Professional edition, you can use a single license for either environments.
+MFractor is available for both Visual Studio for Windows and Mac, giving you powerful Xamarin productivity tools in the IDE of your choosing.
 
-## Summary
+An MFractor Professional license can be used in **both** IDEs,
 
 In this post we presented MFractor, a very stable and mature extension Visual Studio that made its way on to Windows, with 200+ features to greatly enhance development experience. This overview shows only a few of the powerful tools provided by the product. Check out our [Feature Matrix](https://docs.mfractor.com/feature-matrix/) to see everything that we can do for you. You can also reach us at (add links to our social networks?) and give your feedbacks at ().

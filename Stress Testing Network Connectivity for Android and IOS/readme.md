@@ -21,21 +21,15 @@ https://www.howtogeek.com/214053/how-to-turn-your-mac-into-a-wi-fi-hotspot
 
 ## Using The Network Link Conditioner
 
-
 Main settings:
 
 **Downlink**
 
 **Uplink**
 
-
-
-
 ### Applying Network Conditioning Profiles
 
 ### Creating Custom Profiles
-
-
 
 
 ![]
