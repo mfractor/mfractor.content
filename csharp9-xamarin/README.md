@@ -64,9 +64,9 @@ Last, but not least, suppose we need to set the published date on the instance w
 FeedEntry entryWithSummary = entry with { Summary = "Get to know .NET 5.0 and C# 9.0 from Xamarin Developers PoV" };
 ```
 
-Our initial record hadn't declared the `Summary` property. By using the `with` expression on the previous record we created we could create a new instance with all the existing values and adding the summary.
+Our initial record hadn't declared the `Summary` property. By using the `with` expression on the previous record we could create a new instance with all the existing values and adding the summary.
 
-Well, there's a crash course on some of the features that I found most interesting and that I'll probably be using day-by-day, but there's lot more like [pattern-matching enhancements](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9#pattern-matching-enhancements) and [Top Level Statements](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9#top-level-statements) that you can check on the docs.
+Well, that's a crash course on some of the features that I found most interesting and that I'll probably be using day-by-day, but there's lot more like [pattern-matching enhancements](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9#pattern-matching-enhancements) and [Top Level Statements](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9#top-level-statements) that you can check on the docs.
 
 For now I hope I could give you some insight about what we already have available to us mobile developers. There are still some time until we get to MAUI and all the niceties to come with .NET 6, and we will keep exploring it on the months to come to make sure we provide the best tooling for developers to the nice new features and patterns we have head.
 
