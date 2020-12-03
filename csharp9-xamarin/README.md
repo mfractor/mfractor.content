@@ -1,22 +1,26 @@
 # .NET 5.0 and C# 9.0 for Xamarin Developers
 
-.NET 5 has finally arrived and is one of the biggest releases on the history of .NET platform, being the first phase on the unified view that Microsoft unveiled last year, where we can finally have a single platform for our entire application stack.
+.NET 5 has finally arrived and is one of the biggest releases on the history of .NET platform! being the first phase on the unified view that Microsoft unveiled last year, where we can finally have a single platform for our entire application stack.
 
 ![](img/dotnet5_platform.png)
 
-But what it means for Xamarin developers? Well, unfortunately nothing much for now 🤷🏼‍♂️...
+But what does this means for Xamarin developers?
 
-Last may Microsoft announced [.NET Multi-platform App UI](https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui/) (or MAUI for short), that's where the future o Xamarin and Xamarin.Forms is heading to, but this is such a big a change that it would not be able to be ready on time for .NET, so its postponed to version 6.0, expected to be released on the next year.
+Last may Microsoft announced [.NET Multi-platform App UI](https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui/) (or MAUI for short); the future of Xamarin and Xamarin.Forms that makes Xamarin a first-class member of .NET. But, as this is such a big a change that it would not be able to be ready in time for .NET 5.0, so its postponed to version 6.0, expected to be released next year.
+
+While we wait for MAUI and .NET 6.0, we have [Xamarin.Forms 5.0](https://devblogs.microsoft.com/xamarin/xamarin-forms-5-preview/) to look forward to in the immediate future. Including brushes/shapes support, swipe view, drag+drop, templating and much more!
 
 ![](img/maui-01-overview.png)
 
-On the mean time, the .NET team keep its unification effort by bringing most of the .NET Core BCL implementation to Mono, so we should already be able to take advantage of some of the [optimizations done to .NET 5](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/) on the most recent versions of Xamarin.Android and Xamarin.iOS. This source code unification should be ready by .NET 6, when they will be named **.NET for iOS** and **.NET for Android** (and the Xamarin brand will be dropped 😬).
+The .NET team is also focusing its unification effort by bringing most of the .NET Core BCL implementation to Mono. This is exciting as we can take advantage of the [optimizations in  .NET 5](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/) in the most recent versions of Xamarin.Android and Xamarin.iOS. This source code unification should be ready by .NET 6, when they will be named **.NET for iOS** and **.NET for Android** (and the Xamarin brand will be dropped 😬).
 
 Well, for now I've talked about the invisible part, but there's an important last piece that we can start using right now: **C# 9.0**! 🎉
 
-This last installment of the language is not automatically enabled for Xamarin projects, but [James Montemagno](https://montemagno.com/author/james-montemagno/) have done a [great post explaining how to enable it](https://montemagno.com/enabling-c-9-in-xamarin-net-standard-projects/?utm_campaign=Weekly%2BXamarin&utm_medium=email&utm_source=Weekly_Xamarin_286) while explaining the rationals behind language selection and availability.
+## C# 9.0
 
-But what's good about C# 9.0? Well, there are lots of new features, some that was postponed from previous versions and is finally made available, like the **Record Types**. This is a language construct that allows us to declare data objects that can easily be made immutable, like:
+The latest installment of the language is not automatically enabled for Xamarin projects, but [James Montemagno](https://montemagno.com/author/james-montemagno/) has done a [great post explaining how to enable it](https://montemagno.com/enabling-c-9-in-xamarin-net-standard-projects/?utm_campaign=Weekly%2BXamarin&utm_medium=email&utm_source=Weekly_Xamarin_286) while explaining the rationals behind language selection and availability.
+
+But what's good about C# 9.0? Well, there are lots of new features, some postponed from previous versions and finally made available. One of these new features is **Record Types**. This is a language construct that allows us to declare data objects that can easily be made immutable, like:
 
 ```csharp
 public record FeedEntry
