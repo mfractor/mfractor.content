@@ -12,7 +12,7 @@ The `INotifyPropertyChanged` interface is a part of the .NET runtime that we use
 
 To use `INotifyPropertyChanged`, we implement the interface and then trigger the `PropertyChanged`.
 
-An interface that adds behavoiur to notify that a classes property value changes.
+An interface that adds behaviour to notify that a classes property value changes.
 
 At a rudimentary level, we implement property change
 
