@@ -12,9 +12,17 @@ This blog is part thought experiment, part proposal with the goal of making grid
 
 So firstly, what do I mean by "humanising"? To me, this is the process of structuring code/syntax so that it is significantly easier to understand. I should be able to look at a piece of code and read it like a sentence, doing minimal translation in my head.
 
-Consider the `is not null` syntax introduced in C# 9; `if (value is not null)` vs `if (value != null)`. The `value is not null` uses human language instead of operators and reads like a normal sentence.
+Consider the `is not null` syntax introduced in C# 9:
 
-Another example is the `foreach` keyword in C#: `foreach (var item in Items)` vs `for (var i = 0; i < Items.Count; ++i) { var item = Items[i]; }`. The `foreach` syntax is significantly easier to understand.
+ * `if (value is not null)` vs `if (value != null)`.
+
+The `value is not null` uses human language instead of operators and reads like a normal sentence.
+
+Another example is the `foreach` keyword in C#:
+
+ * `foreach (var item in Items)` vs `for (var i = 0; i < Items.Count; ++i) { var item = Items[i]; }`.
+
+The `foreach` syntax is significantly easier to understand.
 
 Before we dive into a potential solution to humanise the syntax of grid, let's explore an example that outlines the difficulties grids pose.
 
@@ -79,9 +87,9 @@ This is an example of `GridLocation` and `GridSpan` applied to the previous code
 
 There are a few benefits here:
 
- * The desired row/column of an element is described clearing through
+ * The desired row/column of an element is described clearly through the `{local:GridLocation dividerRow}` syntax.
  * As rows/columns are resolved at runtime via the `GridLocation` extension, we can freely move and delete rows/columns without needing to readjust indices and spans.
- * We can use `GridSpan` extensions `From` and `To` to easily calculate the correct spans through names. This reduces code complexity and makes it very clear what the intended behaviour of a span is.
+ * We can use the `From` and `To` properties on `GridSpan`to calculate the correct spans through names. This reduces code complexity and makes it clear what the intended behaviour of a span should be.
 * Each row/column definition are now documented via the `x:Name` attribute.
 
 Immediately this code is more readable; a developer can look at it and clearly understand the intended location of a view in the UI. We are more likely to spot errors while building our UIs and code-reviewers can more easily understand the intent of our UIs.
@@ -96,7 +104,7 @@ While stable, tested and working, these extensions should be considered experime
  * These extensions do not have API documentation.
  * These extensions do not have thorough error logging to assist you in diagnosing runtime issues.
  * These extensions use reflection to perform the location and span calculations. This may have adverse runtime performance impacts.
- * Finally, these extensions do not have code-completion or design time analysis to assist in development. (But this could be added to MFractor pretty easily 😉).
+ * Finally, these extensions do not have code completion or design time analysis to assist in development. (But this could be added to MFractor pretty easily 😉).
 
 ## Summary
 
