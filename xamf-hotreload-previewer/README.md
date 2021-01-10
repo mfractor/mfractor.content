@@ -1,25 +1,155 @@
-# XAML Previewer and Hot Reload
+# XAML Hot Reload and Previewer
 
-Last year apple presented Swift UI, their new user interface composition framework that overtime should replace UI Kit for iOS. I found some people surprised by their Previewer tool, which is in fact pretty awesome, but people tend to forget what they already have on their side. XAML Previewer is one of those tools that has been there for a while and most people forgot about. Yeah, its true they were problematic on their first iterations, but it got pretty decent over-time.
+Building UI's has always been a hard job. Modern apps tends to use complex designs and need to adapt to the growing number of device sizes and form-factors. The most established front-end development workflows are based on transcribing designs based on static images to the components that actually render that screen at runtime.
+
+For the Xamarin.Forms developers, UI's are written entirely in code, either through XAML or C#. This allows developers to have full control over the rendering of the interface and split it into reusable components, but comes with drawbacks.
+
+Its hard to write UI code without seeing its actual output. Drawing UI from an application framework is not like composing it on a tool like Photoshop by drawing and styling primites (although its possible through shapes). As developers we think of UI elements as dynamic components and interactive components.
+
+Writing a complex UI is for the most part a trial and error exercise and  commonly you would need to do several roundtrips between edits to test every dynamic and interact aspect of the interface. Lucky us Xamarin.Forms, we have some great tools to facilitate this jobs:
+
+* [**XAML Hot Reload**](): allows us to make changes to change XAML code and have it updated on a running instance of your app, either on a simulator or a real device.
+* [**XAML Previewer**](): is a tool built to Visual Studio XAML editor, that allows us to have instant insight on the UI that you're working.
+
+Let's take a deep look on them!
+
+## XAML Hot Reload
+
+The XAML Hot Reload feature is a recent addition on the Xamarin.Forms developers toolbox. It allows developers to enhance the common workflow of editing a file and testing it on a simulator or device, which is definately the best way of testing your work.
+
+Hot Reload allows us to avoid the expensive roundtrip of building and deploying the app. Changes made to XAML files are instantly updated on the running instance, which in practice makes the simulator a kind of real-time previewer.
+
+### Using Hot Reload
+
+If you've updated to the latest versions of Visual Studio and is working on new projects, Hot Reload is mostly "there". Let's give it a try! Open Visual Studio and create a new Blank Xamarin.Forms project. I'll call it **HotReloadDemo**. After creation just run the app on the simulator.
+
+![](img/blank-template-initial.png)
+
+This is the design of the `MainPage.xml` from the Blank project template. Open the file on the editor while you keep the debugger running and let's change the header to a red background. Save the file and see the "magic":
+
+![](img/hot-reload-change-bg.gif)
+
+After saving the file the page was refreshed with the changes you've made. You can keep doing changes to this file, and when you're happy with them just save it to have it deployed instantly to the running app. Let's try to change the entire page layout, replace the inner of the `ContentPage` element with the following:
+
+```xml
+<Grid RowDefinitions="*,*" RowSpacing="0">
+    <!-- Top half - The chronometer -->
+    <BoxView Color="Red" />
+    <Label
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        FontSize="80"
+        TextColor="White"
+        Text="01:30" />
+
+    <!-- Bottom half - The controls -->
+    <BoxView
+        Grid.Row="1"
+        Color="Brown" />
+    <Ellipse
+        Grid.Row="1"
+        WidthRequest="180"
+        HeightRequest="180"
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Stroke="White" />
+    <Button
+        Grid.Row="1"
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        FontSize="Title"
+        TextColor="White" 
+        Text="START" />
+</Grid>
+```
+
+This is a roughly and incomplete re-creation of the [Interval Timer](https://apps.apple.com/us/app/interval-timer-hiit-workouts/id406473568#?platform=iphone) app main screen. It's not meant to be perfect, just to give us an entire new interface. Please be mercyful with my design skills... 🙂
+
+So, when you save the file, you should see that after a flash the whole content of the screen will be replaced with no damage to the running app. 
+
+![](img/hot-reload-sim-edited.png)
+
+You can keep doing this until you're satisfied, then you get to your next design subject. Hot Reload is smart enough to identify custom views and keep them updated as you edit, which allows for example to change the layout of a Collection View cell on it's own cell file and having it updated on the running app.
+
+In the following example I've created a custom view to represent the control panel on the bottom of the screen (file `Views/ControlPanel.xml`):
+
+```xml
+<Grid
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HotReloadDemo.Views.ControlPanel"
+    BackgroundColor="Brown">
+
+    <Ellipse
+        WidthRequest="180"
+        HeightRequest="180"
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Stroke="White" />
+    <Button
+        BackgroundColor="Transparent"
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        FontSize="Title"
+        TextColor="White" 
+        Text="START" />
+    
+</Grid>
+```
+
+Then added it to the main page:
+
+```xml
+<Grid RowDefinitions="*,*" RowSpacing="0">
+    <!-- Top half -->
+    <BoxView Color="Red" />
+    <Label
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        FontSize="80"
+        TextColor="White"
+        Text="00:30" />
+    <!-- Bottom half component -->
+    <views:ControlPanel Grid.Row="1" />
+</Grid>
+```
+
+Try changing something on the nested view and see it being propagated to the simulator!
 
 
-Now a hot new feature (no pun intended) is the Hot Reload. While the Previewer is fine basic work, the Hot Reload is a really 
 
+>**Note:** I've kept the code for the views as simple as possible to focus on previewer experience. It by no means represent real production code that I would add to a project.
 
-Designing UI's for mobile apps has always been a hard task. XAML is a excelent language for describing user interfaces, but it still falls short of tooling like we used to have with WPF (although I personally never meet programmers who really preferred )
+By default, Hot Reload will refresh the entire page no matter how simple is the change. There's a feature **currently in preview** to refresh only the changed view. You can set it on the Visual Studio Preferences:
 
+![](img/hot-reload-preferences.png)
 
+Finally, Hot Reload can be used on iOS and Android projects simultaneously. Create a run configuration to start both projects on debug, now you can put the iOS simulator and the Android emulator side-by-side and review how your changes apply on both platforms:
 
-## Introduction
+![](img/hot-reload-side-by-side.gif)
 
-Outline challenges of building mobile UIs and the need to visually see our changes.
+In the example above I've added the code for a Stop button to the right of the panel. Here's the code:
 
-Brief description of hot reload and Previewer.
+```xml
+<Grid
+    WidthRequest="80"
+    HeightRequest="80"
+    VerticalOptions="Center"
+    HorizontalOptions="End">
+    <Ellipse
+        Stroke="White" />
+    <Button
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        BackgroundColor="Transparent"
+        TextColor="White"
+        Text="Stop" />
+</Grid>
+```
 
-Visual Studio brings a couple of tools to assist on writing your UI code, the Previwer and more recently Hot Reload. 
+>Notice we're using the `Ellipse` View from Shapes feature of Xamarin.Forms 5. We'll be covering it in a future post.
 
-Hot reload -> make a change and see it on a physical device.
-Previewer - A design-time, in editor tool to preview the rendering of our UIs.
+XAML Hot Reload is available on Visual Studio for Mac and Windows starting on the free community tier. Actually its not tied only to Visual Studio as is much more a compiler/debugger feature, making it available on JetBrains Rider too.
 
 ## Previewer
 
@@ -31,73 +161,15 @@ The Previewer is available while editing XAML files. To use it just open a XAML 
 
 While in split mode, you can choose to preview for iOS and Android, and change between some device screen sizes and orientations. Then you can edit your code to have its preview updated in real time:
 
-![](img/previwer-live-change.gif)
+![](img/previewer-live-change.gif)
 
-The Previewer is a fine tool and it's been serving us well for some years, but now it's officially beeing phased out (check out the warning on its [documentation page](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/xaml/xaml-previewer/?pivots=macos)) in favor the XAML Hot Reload.
+The Previewer is a fine tool and it's been serving us well for some years, but now it's officially beeing phased out (check out the warning on its [documentation page](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/xaml/xaml-previewer/?pivots=macos)) in favor the XAML Hot Reload. 
 
 ![](img/previewer-warning.png)
 
+Visual Studio is already suggesting using Hot Reload instead of the Previewer:
 
-## Hot Reload
-
-XAML Hot Reload was recently introduced on the toolbox of Xamarin.Forms developers. It could be considered like a "spiritual successor" of the Previewer, in the sense that it tries to solve a similar pain, but in a totally different way.
-
-Most developers like to write their stuff and run on simulators or devices to check the results. While a Previewer is useful, it puts the subject (the View you're working on) out of the context of the whole application. Testing the real thing is always better, but build and deployment times are high, specially on large and complex projects.
-
-Hot Reload builds on top of this workflow by allowing the developer to change Views "on the fly", making the running app an actual full-fledged Previewer. Better yet, it works for physical devices, which is the ultimate testing ground.
-
-### Using Hot Reload
-
-If you've updated to the latest versions of Visual Studio and is working on new projects, Hot Reload is mostly "there". Let's give it a try! Open Visual Studio and create a new Shell Xamarin.Forms project. I will call it **HotReloadDemo**. After creation just run the app on the simulator.
-
-> I've chosen the Blank App template because the others have too much boilerplate. 
-
-> **Note**: I wasn't intented to do a pixel-perfect re-creation of Interval Timer UI, but just use it as base for experimenting on designing with Hot Reload.
-
-For this demo I want to re-create the main screen of the **Interval Timer** app, a very nice Stopwatch for HIIT workouts with an compelling yet easy to re-create visual.
-
-
-The Visual Studio template for the Shell Project opens up on the _About_ page, that is represented by the file `Views/AboutPage.xaml`. Open up the file and make some changes, like 
-
-
-Its a productivity tool targeted to aid on composing the visuals of an app. It builds on top of the development workflow of changing some stuff, deploying and testing. 
-
-The new tool builds on top of the common development workflow of "changing some stuff, compiling and running the whole project and test for the small change". 
-
-While the Previewer was an integrated tool, Hot Reload allows you make changes on running instaces of the app on simulators or physical devices. 
-
- This overcomes some limitations of the Previewer that needed to be feed with design-time data, and 
-
-
-
-With this new tool we are able to make changes on a XAML file and have it re-deployed in real time to a running instance of the app. 
-
-
-
-While the previewer was convenient, it kinda buggy and have some issues and limitations when dealing 
-
-
-
-
-
-What is it?
-
-Hot Reload is a nice feature that allows changes to a XAML source to be applied to the running app in either the simulator or on a real device. 
-
-It's very useful when composing a Page or View, because it allows 
-
-Why is it useful?
-
-
-
-How do I use it?
-It's strengths?
-It's limitation?
-Any license limitations?
-
+![](img/previewer-deprecation.png)
 
 ## Summary
 
-XAML Previewer and XAML Hot Reload are tools for aiding on the complex task of creating UI's on Xamarin.Forms project. The former was introduced in the early years of the framework and had several issues and limitations that paved the way for the modern Hot Reload feature.
-
-I personally feel sad about the deprecation of the Previewer, even though the modern tool being more powerful, using the Previewer was convenient. I supose that this deprecation has to do with upcoming changes to the Xamarin platform (MAUI), that will make support the Previewer much complicated, so its understable.
