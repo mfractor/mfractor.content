@@ -58,7 +58,7 @@ Alternatively, you can host the Dotfuscator nuget
 
 ## Integrate Dotfuscator Into Your App
 
-Finally, to activate Dotfuscator in your builds, add the following content to the end of your Android and iOS projects:
+To activate Dotfuscator in your builds, add the following content to the end of your Android and iOS projects:
 
 ```
     <!-- Import environment-specific build properties for Dotfuscator, if they exist. -->
