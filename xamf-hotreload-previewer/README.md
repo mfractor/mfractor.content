@@ -8,7 +8,7 @@ Its hard to write UI code without seeing its actual output. Drawing UI from an a
 
 Writing a complex UI is for the most part a trial and error exercise and  commonly you would need to do several roundtrips between edits to test every dynamic and interact aspect of the interface. Lucky us Xamarin.Forms, we have some great tools to facilitate this jobs:
 
-* [**XAML Hot Reload**](): allows us to make changes to change XAML code and have it updated on a running instance of your app, either on a simulator or a real device.
+* [**XAML Hot Reload**](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/xaml/hot-reload): allows us to make changes to change XAML code and have it updated on a running instance of your app, either on a simulator or a real device.
 * [**XAML Previewer**](): is a tool built to Visual Studio XAML editor, that allows us to have instant insight on the UI that you're working.
 
 Let's take a deep look on them!
@@ -116,8 +116,6 @@ Then added it to the main page:
 
 Try changing something on the nested view and see it being propagated to the simulator!
 
-
-
 >**Note:** I've kept the code for the views as simple as possible to focus on previewer experience. It by no means represent real production code that I would add to a project.
 
 By default, Hot Reload will refresh the entire page no matter how simple is the change. There's a feature **currently in preview** to refresh only the changed view. You can set it on the Visual Studio Preferences:
@@ -151,6 +149,8 @@ In the example above I've added the code for a Stop button to the right of the p
 
 XAML Hot Reload is available on Visual Studio for Mac and Windows starting on the free community tier. Actually its not tied only to Visual Studio as is much more a compiler/debugger feature, making it available on JetBrains Rider too.
 
+As good as Hot Reload could be [there are still some limitations](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/xaml/hot-reload). Its available only to Android and iOS, and some scenarios will require rebuild and redeploy.
+
 ## Previewer
 
 The XAML Previewer is a built-in tool in Visual Studio that shows a real-time representation of the XAML content that you're working on your main editor. It was the first integrated tool to aid developer on designing Xamarin.Forms Pages and Views.
@@ -172,4 +172,14 @@ Visual Studio is already suggesting using Hot Reload instead of the Previewer:
 ![](img/previewer-deprecation.png)
 
 ## Summary
+
+XAML Previewer and Hot Reload are great tools to aid Xamarin.Forms developers on composing their UI's. I'm personally sad about the discontinuation of the Previewer by its convenience, and Hot Reload should serve us pretty well when its gone. I suppose they're laying the ground for MAUI that will more officially supported platforms out of the box.
+
+Hot Reload should evolve overtime. There are some preview features like reloading only changed parts and stability improvements. Also I hope that they've come to support refreshing C# code also. This would open the tool for scenarios like C# Markup. We'll keep watching! 😎
+
+## About The Author
+
+Rafael is a brazilian Software Engineer who have worked across several development stacks and settles its passion on the Mobile Development as an Architectect on native iOS and Xamarin projects, and works as a developer of the MFractor. During the last decade he taught several courses on mobile development on his home country and is passionate about learning and teaching technology.
+
+You can find him on GitHub [github.com/ravero](https://github.com/ravero), LinkedIn [linkedin.com/in/ravero](https://www.linkedin.com/in/ravero/) and blogging on [ravero.medium.com](https://ravero.medium.com) (in portuguese 😆).
 
