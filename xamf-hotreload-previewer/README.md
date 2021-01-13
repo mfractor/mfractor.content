@@ -4,24 +4,24 @@ Building UI's has always been a hard job. Modern apps tends to use complex desig
 
 For the Xamarin.Forms developers, UI's are written entirely in code, either through XAML or C#. This allows developers to have full control over the rendering of the interface and split it into reusable components, but comes with drawbacks.
 
-Its hard to write UI code without seeing its actual output. Drawing UI from an application framework is not like composing it on a tool like Photoshop by drawing and styling primites (although its possible through shapes). As developers we think of UI elements as dynamic components and interactive components.
+Its hard to write UI code without seeing its actual output. Drawing UI from an application framework is not like composing it on a tool like Photoshop by drawing and styling primitives (although its possible through shapes). As developers we think of UI elements as dynamic components and interactive components.
 
-Writing a complex UI is for the most part a trial and error exercise and  commonly you would need to do several roundtrips between edits to test every dynamic and interact aspect of the interface. Lucky us Xamarin.Forms, we have some great tools to facilitate this jobs:
+Writing a complex UI is for the most part a trial and error exercise. Commonly you do several roundtrips between edits to test every dynamic and interactive aspect of the interface. Lucky as Xamarin.Forms developers, we have some great tools to facilitate this jobs:
 
 * [**XAML Hot Reload**](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/xaml/hot-reload): allows us to make changes to change XAML code and have it updated on a running instance of your app, either on a simulator or a real device.
-* [**XAML Previewer**](): is a tool built to Visual Studio XAML editor, that allows us to have instant insight on the UI that you're working.
+* [**XAML Previewer**](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/xaml/xaml-previewer/?pivots=macos): is a tool built to Visual Studio XAML editor, that allows us to have instant insight on the UI that you're working.
 
-Let's take a deep look on them!
+Let's take a look at them!
 
 ## XAML Hot Reload
 
-The XAML Hot Reload feature is a recent addition on the Xamarin.Forms developers toolbox. It allows developers to enhance the common workflow of editing a file and testing it on a simulator or device, which is definately the best way of testing your work.
+The XAML Hot Reload feature takes changes to a XAML file and instantly updates it in our running app. Hot Reload allows us to avoid the expensive roundtrip of building and deploying the app to test UI tweaks, lettings us preview it directly on a device (which is the best method for testing our UI work).
 
-Hot Reload allows us to avoid the expensive roundtrip of building and deploying the app. Changes made to XAML files are instantly updated on the running instance, which in practice makes the simulator a kind of real-time previewer.
+As changes made to XAML files are instantly updated in the running app, in practice Hot Reload makes the simulator a kind of real-time previewer. 
 
 ### Using Hot Reload
 
-If you've updated to the latest versions of Visual Studio and is working on new projects, Hot Reload is mostly "there". Let's give it a try! Open Visual Studio and create a new Blank Xamarin.Forms project. I'll call it **HotReloadDemo**. After creation just run the app on the simulator.
+If you've updated to the latest versions of Visual Studio and are working on new projects, Hot Reload is mostly "there". Let's give it a try! Open Visual Studio and create a new Blank Xamarin.Forms project. I'll call it **HotReloadDemo**. After creation just run the app on the simulator.
 
 ![](img/blank-template-initial.png)
 
@@ -65,7 +65,7 @@ After saving the file the page was refreshed with the changes you've made. You c
 
 This is a roughly and incomplete re-creation of the [Interval Timer](https://apps.apple.com/us/app/interval-timer-hiit-workouts/id406473568#?platform=iphone) app main screen. It's not meant to be perfect, just to give us an entire new interface. Please be mercyful with my design skills... 🙂
 
-So, when you save the file, you should see that after a flash the whole content of the screen will be replaced with no damage to the running app. 
+So, when you save the file, you should see that after a flash the whole content of the screen will be replaced in the running app. 
 
 ![](img/hot-reload-sim-edited.png)
 
