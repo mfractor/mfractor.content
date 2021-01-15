@@ -70,8 +70,17 @@ FeedEntry entryWithSummary = entry with { Summary = "Get to know .NET 5.0 and C#
 
 Our initial record hadn't declared the `Summary` property. By using the `with` expression on the previous record we could create a new instance with all the existing values and adding the summary.
 
+## Summary
+
 Well, that's a crash course on some of the features that I found most interesting and that I'll probably be using day-by-day, but there's lot more like [pattern-matching enhancements](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9#pattern-matching-enhancements) and [Top Level Statements](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9#top-level-statements) that you can check on the docs.
 
 For now I hope I could give you some insight about what we already have available to us mobile developers. There are still some time until we get to MAUI and all the niceties to come with .NET 6, and we will keep exploring it on the months to come to make sure we provide the best tooling for developers to the nice new features and patterns we have head.
 
 Stay tuned! 🙂
+
+## About The Author
+
+Rafael is a brazilian Software Engineer who have worked across several development stacks and settles its passion on the Mobile Development as an Architectect on native iOS and Xamarin projects, and works as a developer of the MFractor. During the last decade he taught several courses on mobile development on his home country and is passionate about learning and teaching technology.
+
+You can find him on GitHub [github.com/ravero](https://github.com/ravero), LinkedIn [linkedin.com/in/ravero](https://www.linkedin.com/in/ravero/) and blogging on [ravero.medium.com](https://ravero.medium.com) (in portuguese 😆).
+
