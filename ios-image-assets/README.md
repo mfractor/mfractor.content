@@ -9,7 +9,7 @@ You might ask, why do I need to care about image assets? Aren't they just plain 
 
 When Apple launched iPhone in 2007 they set the landscape for the "glass" smartphones where we are today. A screen of 3,5` with 320x480 resolution was a big deal. Smartphone displays of that era was crappy ugly and pixelated. The iPhone display by contrast was very sharp and beautiful. For developers the fixed resolution made it very easy to design for iPhone in that very early years, and everyone was happy.
 
-But enough is never enough, so circa 2011 we've got iPhone 4 and its **retina display**, that doubled the resolution keeping the same screen size. The idea was that with such high res you couldn't notice the spacing between pixels and rounded edges would be naturally smooth.
+But enough is never enough, so circa 2010 we've got iPhone 4 and its **retina display**, that doubled the resolution keeping the same screen size. The idea was that with such high res you couldn't notice the spacing between pixels and rounded edges would be naturally smooth.
 
 ![](img/retina.jpg)
 
@@ -17,7 +17,7 @@ That bump on the screen quality was very noticeable. But it comes with its own i
 
 >BTW, Apple being Apple started sometime to force apps to be compatible with the retina display, otherwise they would be rejected on the review. There was no escape for developers!
 
-This is when image asset management hell was the born on iOS projects! For now own we needed to provide different versions of the same image to match with the screen resolutions. Then came iPhone 6 Plus, that trippled the resolution, iPads, Retina Display Macs and, well, you got the idea...
+This is when image asset management hell was the born on iOS projects! For now own we needed to provide variations of the same image to match with the screen resolutions. Then came iPhone 6 Plus, that trippled the resolution, iPads, Retina Display Macs and, well, you got the idea...
 
 Of course that tools were created to help with this new problem. They're what this post is about! 😎
 
@@ -31,9 +31,9 @@ Bitmaps are just a matrix of rows and columns where each intersection is painted
 
 I found the little smiley above very representative of what a bitmap is. Of course its just a black and white image. But turning the bits into bytes let us represent a wide palete of colors for each pixel.
 
-Now we come to the vectors, which are more cool to programmers! They're are a mathematical representation of the shapes that form an image. This means that they can be easily scaled which make them very desirable for the responsive designs that we strive to produce in web and mobile apps.
+Now we come to the vectors, which are more cool to programmers! They're are a mathematical representation of the shapes that forms an image. This means that they can be easily scaled which make them very desirable for the responsive designs that we strive to produce in web and mobile apps.
 
-To better understand vector images lets dirty our hands of code. There's an app called [PaintCode](https://www.paintcodeapp.com), that is a drawing app like Sketch or Illustrator where you can make your designs. What makes it different is that instead of saving it to a file, PaintCode generates the code necessary to draw your image on screen with UIKit.
+To better understand vector images lets dirty our hands of code. There's an app called [PaintCode](https://www.paintcodeapp.com), that is a drawing app like Sketch or Illustrator where you can make your designs. What makes it different is that instead of saving it to a file, PaintCode generates the code necessary to draw your image on screen with [`UIKit`]().
 
 Take a look at this screenshot from the tutorial:
 
@@ -41,7 +41,7 @@ Take a look at this screenshot from the tutorial:
 
 Notice that we have a canvas and below it a code section. 
 
-The code itself is not important, but to understand that it represents a series of instructions on **how** the image should be draw on the screen. You can easily change the frame parameter of the `drawBubbleButton` function to any size and the shape will be draw preserving its quality. This is the power of vectors!
+The code itself is not important, but to understand that it represents a series of instructions on **how** the image should be draw on the screen. You can easily change the frame parameter of the `drawBubbleButton` function to any size and the shape will be draw preserving its sharp quality. This is the power of vectors!
 
 There's a lot of debate around which type is better, and, as always when it comes to software engineering, the answer is: it depends! Each representation has its pros and cons and you should evaluate your usage scenario and requirements to take a better pick.
 
@@ -69,18 +69,113 @@ The same thing happens for vector images. One of the most common ways of storing
 </svg>
 ```
 
-Notice that you can easily modify this file to chance it's viewbox (the size of the canvas), the width and height or the fill color. More adventurous people may want to mess with the path coordinates, but I think its better to have some image editor for that.
+Notice that you can easily modify this file to change it's "viewbox" (the size of the canvas), the width and height or the fill color. More adventurous people may want to mess with the path coordinates, but I think its better to have some image editor for that.
 
 >**Tip**: Gaplin is very useful free tool for macOS to with SVG files. It has a decent previewer and an exporter to save as PNG or other common image formats.
 
-Other common vector file formats are EPS and PDF (yeah, before a document format PDF is about storing vectorized images). Understanding those differences about image types and their storage is key for organizing the image assets of your project. Also this will allow you to communicate better with the design team. 
+There are several file formats for storing vector images, such as EPS (Extensible PostScript), AI (from Adobe Illustrator) or PDF. Although vectorial images are usually associated with shapes, each of those formats allows you to describe more complex types of elements such as texts and even embbed bitmaps inside a document.
 
-## Screen Densities - The Apple Take
+Vectorial images have a very rich and interesting history that dates back to the PostScript language, the most popular effort to create a standard for describing documents for printing! This has evolved until our modern standards that allows us to store rich image assets in a very optimized way.
+
+>Understanding those differences about image types and their storage is key for organizing the image assets of your project. Also this will allow you to communicate better with the design team. 
+
+## Understanding Screen Densities
+
+Now that we know or problem space let's understand the screen densities, but first let's recall some concepts:
+
+* **Screen Size**: referes to the physical size of of a screen that's normalized measured by its diagonal inches. The screen size by itself normally don't specify its aspect ratio.
+* **Resolution**: refers to how many **pixels** we have on a given screen. They are defined by how many pixels we have on the horizontal axis (the width) by the quantity of pixels on the vertical axis (the height), which forms a matrix. The amount of pixels on a given screen is the product of this two numbers. A few examples:
+    * The original iPhone had a 240x320 screen resolution, with a total of 76800 pixels
+    * iPhone 4 had a 480x640 screen solution with a whoping 307200 pixels!
+* **Density**: the density of a screen is the relation between its size and resolution. Its normally measured by `ppi`, or **pixels per inch**, that is the quantity of dots or pixels that fits into an inch of that screen. The higher the density the better the quality of the image because with more pixels the image can more detailed.
+
+So in the example above either the original iPhone and the iPhone 4 had an 3,5' inch display. While the original has a 165 ppi, iPhone 4 had an stunning 326 ppi!
+
+But what does this means in practice? A picture still worth a thousand words...
+
+![](img/retina-vs-non-retina.jpg)
+
+The image above was taken from the article ["Real retina vs. non-retina photos"](https://artauthority.net/real-retina-vs-non-retina-photos/). On the left we have an image presented on a non-retina display. We can see that there's a lot of spacing around each of the dots that compromises the image quality.
+
+On the right we have the same picture presented on a retina display. This is a screen that has the same physical size of the left one but the resolution is doubled. We can see that the spacing aruond each pixel is much smaller, producing a higher quality image with much more details. The rounded edges are a lot smoother as an example.
+
+The picture above is a close-up. We normally don't use a screen to close to our eyes to see it in that detail. So in effect when using a retina display you won't be able to notice the spacing around pixels.
+
+>If you're curious about all the iPhones screen size, resolution and PPI [there's an excelent reference on this site](https://iosref.com/res).
+
+### What About Developers?
+
+Historically developers of graphical interfaces always thought of developing UI's based on the screen resolution alone, and this was also true for the first generation of iPhones. We had a single device and it had a single display size and resolution and would draw our elements based on that available space, by doing simple calculations and rendering on absolute coordinates.
+
+The introduction of retina displays doubled the resolution but keep the same screen size. This would have two immediate effects:
+
+* Breaking all the existing programs that relied on the fixed screen size. In the worst case scenario they would take a quarter of the screen;
+* All the UI elements would be he a quarter of its size making then unberable to read or interact with touch.
+
+Its important to remember that increasing the screen resolution is all about **image quality** and not giving more space. The iPhone 4 display had the same physical size but doubled the resolution so where we had 1 pixel now we had 4 pixels in the same space. But wait, what?! You told me that it's the double of the resolution, how do we have 4 pixels to 1 ratio? I'll try to picture that for you:
+
+
+When we put the 2 screens side-by-side its very easy to picture! (no pun intended). Since we doubled the resolution on each axis we actually have 4 times many pixels than the previous generation. Another way of seeing it is that we can fit 4 screens of the original iPhone on just one screen of the retina display.
+
+When running our app on a retina display we want to keep the UI elements with the same **physical** size and its just a matter of doubling the size of the elements themselves. But we don't want to manage different sizes for different devices. This seems the kind of problem that can be solved by software, and this is exactly what the `point` measure does.
+
+Starting on iOS 4, Apple updated the whole `UIKit` library to start using the `Point` measure instead of pixels. This abstracts away our concerns about the **density** of the screen. From the developer point of view, he was still working with a canvas of 240x320 **points**. It is now up to UIKit to decide the **actual** size of an element depending on the device that the rendering is done. 
+
+Ok, so this is quite a lot to grasp! 😓 And I myself took a long time to make a sense of all of this. But now we can advance to talk about images at least...
+
+
+The Apple HIG (Human Interface Guidelines) recommended that buttons should have at least 44 pixels in height. 
+
+
+
+
+
+ they decided to abstract away the **density** aspect by introducing `Point` measure, a "virtual" measure unit for development.
+
+
+
+
+
+The introduction of retina displays would move us away from our confort zone, but high density screens on a phone wasn't about the space but the quality.
+
+
+
+Also, an app would always fills that entire screen space, in contrast with computer UI's where the user can resize your app window.
+
+This made developing UI's for iPhone apps very easy and convenient because we were aware of all the space we have available all the time.
+
+By that time it was common to develop user interfaces using absolute coordinates so designers though on screens based on the available space in pixels, and developers just draw the elements following those guides.
+
+
+
+Drawing on screen was just like drawing on a canvas, we know upfront available space and draw 
+
+
+>Modern UI development doesn't rely on absolute coordinates because of the plethora of screen sizes that an interface should adapt. There are smart tools for handling this, like Auto Layout and Reactive UI's, where we think of an layout based on contraints rather the space available.
+
+
+
+Now, let's think for a moment. 
+
+If you have a screen with double the resolution on such a small device you don't want your buttons to have half of this side, because they would be hard to read and to interact with.
+
+The **physical size** of the elements should be preserved. 
+
+So Apple made it very for developers by introducing the `point` measure. 
+
+
+
+Points are a "virtual measure" that abstracts away from the developer the density concern. 
+
+
+while resolution is a measure of their own, the density of a screen is a ratio between the resolution and the **physical size** of an screen. 
+
+
+ Screen Densities - The Apple Take
 
 Ok, so now that we understand about image types and how they're represented, how does it fits to the problem that we've proposed at first? When Apple first brought the Retina Displays, they've carefully thought about it in a way that would have the lesser impact on the developer side. So a new measure unit was introduced for developing with UIKit, the `point`. To be more exact, the pixel unit was entirely replaced throught the UIKit SDK anywhere sizing is applied.
 
-We can think of `point`s as a "virtual" measurement unit, the idea is for us to design our layouts over a base size, allowing the system to automatically scale the rendering of elements when the canvas size changes. 
-
+We can think of `point`s as a "virtual" measurement unit, the idea is for us to design our layouts over a base size, allowing the system to automatically scale the rendering of elements when the canvas size changes. In practice
 
 
 ## Understanding iOS Image Assets
@@ -243,10 +338,19 @@ There's nothing much we can say against SF Symbols, except that its only availab
 
 ## Using Image Assets in code
 
-The iOS SDK makes it very easy and convenient for us developers to use our image assets in our code. Its slightly different depending on the technology you're using for your UI, so we'll break by the main ones. What they all have in common though is how you reference the image by its internal:
+The iOS SDK makes it very easy and convenient for us developers to use our image assets in our code. Most of the time it is just a matter of referencing the asset from its name, so having good standards for naming your assets is a good help.
 
-* **For Bundle Resource Images**: the name of the file **without the file extension** and **without the density suffixs**.
-* **For Images inside an Asset Catalog**:  
+Loading images is mostly done through the [`UIImage`](https://developer.apple.com/documentation/uikit/uiimage/) class. It has several initializers that allows loading images in different ways from different sources, but the most common is the `init(named:)`, 
+
+
+Here are some rules:
+
+* **Bundle Image Resources**: use the name of the file without extension and **without the density suffix** (`@2x`, `@3x`, etc.), that way the variant that best fits will be automatically selected for you.
+* **Images Inside Asset Catalogs**: use the name of the image set that you want to load.
+
+
+
+Let's bring some examples on how you can do it using different SDK's.
 
 ### UIKit and Xamarin.iOS projects
 
