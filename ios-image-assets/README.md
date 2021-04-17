@@ -53,13 +53,9 @@ The important thing to note is that increasing the screen resolution is all abou
 
 But wait, what?! You told me that it's the double of the resolution, how do we have 4 pixels to 1 ratio? I'll try to picture that for you:
 
----
+![](img/density-side-by-side.png)
 
-!!! ADD an image to represent the side-by-side of screens and how pixels are dispersed !!!
-
----
-
-When we put the 2 screens side-by-side its very easy to picture! (no pun intended). Since we doubled the resolution on each axis we actually have 4 times many pixels than the previous generation. Another way of seeing it is that we can fit 4 screens of the original iPhone on just one screen of the retina display.
+Let's pretend that the image above represent two slices of the same physical size, one cut from an original iPhone and the other from an iPhone 4. Each square represents a pixel, and its easy to see that where there was a single pixel on the first now fits four of them. Since we doubled the resolution on each axis we actually have 4 times many pixels than the previous generation. Another way of seeing it is that we can fit 4 screens of the original iPhone on just one screen of the retina display.
 
 When running our app on a retina display we want to keep the UI elements with the same **physical** size and its just a matter of doubling the size of the elements themselves. But we don't want to manage different sizes for different devices. This seems the kind of problem that can be solved by software, and this is exactly what the `point` measure does.
 
