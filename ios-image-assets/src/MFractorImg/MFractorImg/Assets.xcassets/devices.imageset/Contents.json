@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "iconfinder_Adaptive_design_669939-converted.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "iconfinder_Adaptive_design_669939-converted-1.pdf",
+      "idiom" : "watch"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
