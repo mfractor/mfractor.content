@@ -77,7 +77,7 @@ Well, its not a masterpiece but I hope it made you smile! 😆 I found it to be 
 
 ![](img/color-bitmap.png)
 
-Here each pixel represet a number and by applying a pallete, which maps each number to specific color, we now produce a colored bitmap. The higher the number the most colorful the image can be.
+The image is a reproduction from [Adafruit](https://learn.adafruit.com/assets/74498) authored by [Carter Nelson](https://learn.adafruit.com/users/caternuson). Here each pixel represet a number and by applying a pallete, which maps each number to specific color, we now produce a colored bitmap. The higher the number the most colorful the image can be.
 
 Here we can also see that bitmaps has a fixed width and height, which represents its big downsize. Nowadays we have very good algorithms for shrinking or enlarging bitmaps, but there's always some loss.
 
@@ -391,3 +391,10 @@ In closing, I'm leaving a few references for this subject so you can take a deep
 * [SVG Assets in Xcode for Single Scale Images](https://www.avanderlee.com/xcode/svg-image-assets/)
 * [SF Symbols: The benefits and how to use them guide](https://www.avanderlee.com/swift/sf-symbols-guide/)
 * [Drawing and Printing Guides for iOS - Loading Images](https://developer.apple.com/library/archive/documentation/2DDrawing/Conceptual/DrawingPrintingiOS/LoadingImages/LoadingImages.html)
+
+## About The Author
+
+Rafael is a brazilian Software Engineer who have worked across several development stacks and settles its passion on the Mobile Development as an Architectect on native iOS and Xamarin projects, and works as a developer of the MFractor. During the last decade he taught several courses on mobile development on his home country and is passionate about learning and teaching technology.
+
+You can find him on GitHub [github.com/ravero](https://github.com/ravero), LinkedIn [linkedin.com/in/ravero](https://www.linkedin.com/in/ravero/) and blogging on [ravero.medium.com](https://ravero.medium.com) (in portuguese 😆).
+
