@@ -380,6 +380,10 @@ In Xamarin.Forms we present images with the `Image` component like so:
 
 You can simply pass the name of the asset you want to load to the `Source` property as of the rules we've set above. This works because on the covers there's a `UIImageView`, so the Xamarin.Forms encapsulates the same calls on the UIKit section.
 
+## MFractor Image Tools
+
+MFractor has a set productivity tools for Image management. It aids developer on importing, maintaning and referencing images on Xamarin projects. Check it out on our [Feature Matrix](https://docs.mfractor.com/feature-matrix/#image-management) and get to know everything it haves to offer.
+
 ## Summary
 
 Working with images in mobile projects should be a common and trivial task, but has its specificities that we should be aware of when it comes to screen densities. Also, other kinds of image variations has been introduced over time, like the Dark and Light Themes.
