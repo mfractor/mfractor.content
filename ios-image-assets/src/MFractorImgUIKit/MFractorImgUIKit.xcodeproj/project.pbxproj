@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF101FA726224A08001446C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF101FA626224A08001446C4 /* AppDelegate.swift */; };
+		FF101FA926224A08001446C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF101FA826224A08001446C4 /* SceneDelegate.swift */; };
+		FF101FAB26224A08001446C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF101FAA26224A08001446C4 /* ViewController.swift */; };
+		FF101FAE26224A08001446C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF101FAC26224A08001446C4 /* Main.storyboard */; };
+		FF101FB026224A0A001446C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF101FAF26224A0A001446C4 /* Assets.xcassets */; };
+		FF101FB326224A0A001446C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF101FB126224A0A001446C4 /* LaunchScreen.storyboard */; };
+		FF101FBE26224A0B001446C4 /* MFractorImgUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF101FBD26224A0B001446C4 /* MFractorImgUIKitTests.swift */; };
+		FF101FC926224A0B001446C4 /* MFractorImgUIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF101FC826224A0B001446C4 /* MFractorImgUIKitUITests.swift */; };
+		FFEB6BFD262B577E00A5F350 /* mfractor_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFEB6BFA262B577E00A5F350 /* mfractor_logo@2x.png */; };
+		FFEB6BFE262B577E00A5F350 /* mfractor_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFEB6BFB262B577E00A5F350 /* mfractor_logo@3x.png */; };
+		FFEB6BFF262B577E00A5F350 /* mfractor_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FFEB6BFC262B577E00A5F350 /* mfractor_logo.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF101FBA26224A0B001446C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF101F9B26224A08001446C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF101FA226224A08001446C4;
+			remoteInfo = MFractorImgUIKit;
+		};
+		FF101FC526224A0B001446C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF101F9B26224A08001446C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF101FA226224A08001446C4;
+			remoteInfo = MFractorImgUIKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF101FA326224A08001446C4 /* MFractorImgUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFractorImgUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF101FA626224A08001446C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF101FA826224A08001446C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FF101FAA26224A08001446C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF101FAD26224A08001446C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF101FAF26224A0A001446C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF101FB226224A0A001446C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FF101FB426224A0A001446C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF101FB926224A0B001446C4 /* MFractorImgUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MFractorImgUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF101FBD26224A0B001446C4 /* MFractorImgUIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFractorImgUIKitTests.swift; sourceTree = "<group>"; };
+		FF101FBF26224A0B001446C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF101FC426224A0B001446C4 /* MFractorImgUIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MFractorImgUIKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF101FC826224A0B001446C4 /* MFractorImgUIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFractorImgUIKitUITests.swift; sourceTree = "<group>"; };
+		FF101FCA26224A0B001446C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFEB6BFA262B577E00A5F350 /* mfractor_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mfractor_logo@2x.png"; sourceTree = "<group>"; };
+		FFEB6BFB262B577E00A5F350 /* mfractor_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mfractor_logo@3x.png"; sourceTree = "<group>"; };
+		FFEB6BFC262B577E00A5F350 /* mfractor_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mfractor_logo.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF101FA026224A08001446C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF101FB626224A0B001446C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF101FC126224A0B001446C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF101F9A26224A08001446C4 = {
+			isa = PBXGroup;
+			children = (
+				FF101FA526224A08001446C4 /* MFractorImgUIKit */,
+				FF101FBC26224A0B001446C4 /* MFractorImgUIKitTests */,
+				FF101FC726224A0B001446C4 /* MFractorImgUIKitUITests */,
+				FF101FA426224A08001446C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF101FA426224A08001446C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF101FA326224A08001446C4 /* MFractorImgUIKit.app */,
+				FF101FB926224A0B001446C4 /* MFractorImgUIKitTests.xctest */,
+				FF101FC426224A0B001446C4 /* MFractorImgUIKitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF101FA526224A08001446C4 /* MFractorImgUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				FFEB6BF8262B573400A5F350 /* Assets */,
+				FF101FA626224A08001446C4 /* AppDelegate.swift */,
+				FF101FA826224A08001446C4 /* SceneDelegate.swift */,
+				FF101FAA26224A08001446C4 /* ViewController.swift */,
+				FF101FAC26224A08001446C4 /* Main.storyboard */,
+				FF101FAF26224A0A001446C4 /* Assets.xcassets */,
+				FF101FB126224A0A001446C4 /* LaunchScreen.storyboard */,
+				FF101FB426224A0A001446C4 /* Info.plist */,
+			);
+			path = MFractorImgUIKit;
+			sourceTree = "<group>";
+		};
+		FF101FBC26224A0B001446C4 /* MFractorImgUIKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF101FBD26224A0B001446C4 /* MFractorImgUIKitTests.swift */,
+				FF101FBF26224A0B001446C4 /* Info.plist */,
+			);
+			path = MFractorImgUIKitTests;
+			sourceTree = "<group>";
+		};
+		FF101FC726224A0B001446C4 /* MFractorImgUIKitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FF101FC826224A0B001446C4 /* MFractorImgUIKitUITests.swift */,
+				FF101FCA26224A0B001446C4 /* Info.plist */,
+			);
+			path = MFractorImgUIKitUITests;
+			sourceTree = "<group>";
+		};
+		FFEB6BF8262B573400A5F350 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FFEB6BF9262B573A00A5F350 /* Images */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		FFEB6BF9262B573A00A5F350 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FFEB6BFC262B577E00A5F350 /* mfractor_logo.png */,
+				FFEB6BFA262B577E00A5F350 /* mfractor_logo@2x.png */,
+				FFEB6BFB262B577E00A5F350 /* mfractor_logo@3x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF101FA226224A08001446C4 /* MFractorImgUIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF101FCD26224A0B001446C4 /* Build configuration list for PBXNativeTarget "MFractorImgUIKit" */;
+			buildPhases = (
+				FF101F9F26224A08001446C4 /* Sources */,
+				FF101FA026224A08001446C4 /* Frameworks */,
+				FF101FA126224A08001446C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MFractorImgUIKit;
+			productName = MFractorImgUIKit;
+			productReference = FF101FA326224A08001446C4 /* MFractorImgUIKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF101FB826224A0B001446C4 /* MFractorImgUIKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF101FD026224A0B001446C4 /* Build configuration list for PBXNativeTarget "MFractorImgUIKitTests" */;
+			buildPhases = (
+				FF101FB526224A0B001446C4 /* Sources */,
+				FF101FB626224A0B001446C4 /* Frameworks */,
+				FF101FB726224A0B001446C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF101FBB26224A0B001446C4 /* PBXTargetDependency */,
+			);
+			name = MFractorImgUIKitTests;
+			productName = MFractorImgUIKitTests;
+			productReference = FF101FB926224A0B001446C4 /* MFractorImgUIKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FF101FC326224A0B001446C4 /* MFractorImgUIKitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF101FD326224A0B001446C4 /* Build configuration list for PBXNativeTarget "MFractorImgUIKitUITests" */;
+			buildPhases = (
+				FF101FC026224A0B001446C4 /* Sources */,
+				FF101FC126224A0B001446C4 /* Frameworks */,
+				FF101FC226224A0B001446C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF101FC626224A0B001446C4 /* PBXTargetDependency */,
+			);
+			name = MFractorImgUIKitUITests;
+			productName = MFractorImgUIKitUITests;
+			productReference = FF101FC426224A0B001446C4 /* MFractorImgUIKitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF101F9B26224A08001446C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					FF101FA226224A08001446C4 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					FF101FB826224A0B001446C4 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = FF101FA226224A08001446C4;
+					};
+					FF101FC326224A0B001446C4 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = FF101FA226224A08001446C4;
+					};
+				};
+			};
+			buildConfigurationList = FF101F9E26224A08001446C4 /* Build configuration list for PBXProject "MFractorImgUIKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF101F9A26224A08001446C4;
+			productRefGroup = FF101FA426224A08001446C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF101FA226224A08001446C4 /* MFractorImgUIKit */,
+				FF101FB826224A0B001446C4 /* MFractorImgUIKitTests */,
+				FF101FC326224A0B001446C4 /* MFractorImgUIKitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF101FA126224A08001446C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFEB6BFF262B577E00A5F350 /* mfractor_logo.png in Resources */,
+				FF101FB326224A0A001446C4 /* LaunchScreen.storyboard in Resources */,
+				FF101FB026224A0A001446C4 /* Assets.xcassets in Resources */,
+				FF101FAE26224A08001446C4 /* Main.storyboard in Resources */,
+				FFEB6BFD262B577E00A5F350 /* mfractor_logo@2x.png in Resources */,
+				FFEB6BFE262B577E00A5F350 /* mfractor_logo@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF101FB726224A0B001446C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF101FC226224A0B001446C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF101F9F26224A08001446C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF101FAB26224A08001446C4 /* ViewController.swift in Sources */,
+				FF101FA726224A08001446C4 /* AppDelegate.swift in Sources */,
+				FF101FA926224A08001446C4 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF101FB526224A0B001446C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF101FBE26224A0B001446C4 /* MFractorImgUIKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF101FC026224A0B001446C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF101FC926224A0B001446C4 /* MFractorImgUIKitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF101FBB26224A0B001446C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF101FA226224A08001446C4 /* MFractorImgUIKit */;
+			targetProxy = FF101FBA26224A0B001446C4 /* PBXContainerItemProxy */;
+		};
+		FF101FC626224A0B001446C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF101FA226224A08001446C4 /* MFractorImgUIKit */;
+			targetProxy = FF101FC526224A0B001446C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF101FAC26224A08001446C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF101FAD26224A08001446C4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FF101FB126224A0A001446C4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF101FB226224A0A001446C4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF101FCB26224A0B001446C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FF101FCC26224A0B001446C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF101FCE26224A0B001446C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MFractorImgUIKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mfractor.MFractorImgUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF101FCF26224A0B001446C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MFractorImgUIKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mfractor.MFractorImgUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FF101FD126224A0B001446C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MFractorImgUIKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mfractor.MFractorImgUIKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MFractorImgUIKit.app/MFractorImgUIKit";
+			};
+			name = Debug;
+		};
+		FF101FD226224A0B001446C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MFractorImgUIKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mfractor.MFractorImgUIKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MFractorImgUIKit.app/MFractorImgUIKit";
+			};
+			name = Release;
+		};
+		FF101FD426224A0B001446C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MFractorImgUIKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mfractor.MFractorImgUIKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MFractorImgUIKit;
+			};
+			name = Debug;
+		};
+		FF101FD526224A0B001446C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MFractorImgUIKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mfractor.MFractorImgUIKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MFractorImgUIKit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF101F9E26224A08001446C4 /* Build configuration list for PBXProject "MFractorImgUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF101FCB26224A0B001446C4 /* Debug */,
+				FF101FCC26224A0B001446C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF101FCD26224A0B001446C4 /* Build configuration list for PBXNativeTarget "MFractorImgUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF101FCE26224A0B001446C4 /* Debug */,
+				FF101FCF26224A0B001446C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF101FD026224A0B001446C4 /* Build configuration list for PBXNativeTarget "MFractorImgUIKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF101FD126224A0B001446C4 /* Debug */,
+				FF101FD226224A0B001446C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF101FD326224A0B001446C4 /* Build configuration list for PBXNativeTarget "MFractorImgUIKitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF101FD426224A0B001446C4 /* Debug */,
+				FF101FD526224A0B001446C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF101F9B26224A08001446C4 /* Project object */;
+}
