@@ -7,13 +7,13 @@ When developing apps you'll come to the point where you'll need to deal with ima
 
 You might ask, why do I need to care about image assets? Aren't they just plain images that I render on my layout? It used to be that simple, but not anymore. But what are the problem with they so? Well, a little history will make things clear.
 
-When Apple launched iPhone in 2007 they set the landscape for the "glass" shaped smartphones where we are today. A screen of 3,5` with 320x480 resolution was a big deal. Smartphone displays of that era was crappy ugly and pixelated. The iPhone display by contrast was very sharp and beautiful. For developers the fixed resolution made it very easy to design for iPhone in that very early years, and everyone was happy. 😌
+When Apple launched iPhone in 2007 they set the landscape for the "glass" shaped smartphones where we are today. A screen of 3,5` with 240x320 resolution was a big deal. Smartphone displays of that era was crappy, ugly and pixelated. The iPhone display by contrast was very sharp and beautiful. For developers the fixed resolution made it very easy to design for iPhone in that very early years, and everyone was happy. 😌
 
-But enough is never enough, so circa 2010 we've got iPhone 4 and its **retina display**, that doubled the resolution keeping the same screen size. The idea was that with such high res you couldn't notice the spacing between pixels and rounded edges would be naturally smooth.
+But enough is never enough, so circa 2010 we've got iPhone 4 and its **retina display** that doubled the resolution keeping the same screen size. The idea was that with such high res you couldn't notice the spacing between pixels and rounded edges would be naturally smooth.
 
 ![](img/retina.jpg)
 
-That bump on the screen quality was very impressive and had a very good customer reception. But it comes with its own issues to developers. To take advantage of such high resolution our apps needed to adapt the layout of the apps and provide images that doubled its own density or they would look so small on the screen that would be impossible to interact with. Software upscaling was possible, but wouldn't produce that sharp edges that users were looking for.
+That bump on the screen quality was very impressive and had a very good customer reception. But it comes with its own issues to developers. To take advantage of such high resolution our apps needed to adapt the layout of the apps and provide images that doubled its own density or they would look so small on the screen that would be terrible to interact with. Software upscaling was possible, but wouldn't produce that sharp edges that users were looking for.
 
 And Apple, being Apple, started sometime to force apps to be compatible with the retina display, otherwise they would be rejected on the review. There was no escape for developers!
 
@@ -25,7 +25,7 @@ Of course that tools were created to help with this new problem. They're what th
 
 Given our problem space, let's learn about screen densities! But first there is a few concepts to recall:
 
-* **Screen Size**: referes to the physical size of of a screen that's normalized measured by its diagonal inches. The screen size by itself normally don't specify its aspect ratio (the ratio between its width and height that defines its actual size).
+* **Screen Size**: referes to the physical size of of a screen that's normalized measured by its diagonal inches. The screen size by itself normally don't specify its aspect ratio (the ratio between its width and height that defines its actual dimensions).
 * **Resolution**: refers to how many **pixels** we have on a given screen. They are defined by how many pixels we have on the horizontal axis (the width) by the quantity of pixels on the vertical axis (the height), which forms a matrix. The amount of pixels on a given screen is the product of this two numbers. A few examples:
     * The original iPhone had a 240x320 screen resolution, with a total of 76800 pixels
     * iPhone 4 had a 480x640 screen solution with a whoping 307200 pixels!
@@ -37,7 +37,7 @@ But what does this means in practice? A picture still worth a thousand words (no
 
 ![](img/retina-vs-non-retina.jpg)
 
-The image above was taken from the article ["Real retina vs. non-retina photos"](https://artauthority.net/real-retina-vs-non-retina-photos/) and is the magnified photo of two Mac displays. On the left we have an image presented on a non-retina display. We can see that there's a lot of spacing around each of the dots that compromises the image quality.
+The image above was taken from the article ["Real retina vs. non-retina photos"](https://artauthority.net/real-retina-vs-non-retina-photos/) and is the magnified photo of two Mac displays. On the left we have an image presented of the non-retina one. We can see that there's a lot of spacing around each of the dots that compromises the image quality.
 
 On the right we have the same picture presented on a retina display. This is a screen that has the same physical size of the left one but the resolution is doubled. We can see that the spacing aruond each pixel is much smaller, producing a higher quality image with much more details. The rounded edges are a lot smoother, as an example.
 
