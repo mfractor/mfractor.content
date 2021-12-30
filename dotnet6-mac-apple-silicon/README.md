@@ -41,7 +41,7 @@ This is messy! There's not support on side-by-side installation of the previous 
 
 As the time of this writing the latest Preview release was the 4th, from december 14th. There is no word on the Release Notes about this messy .NET support scenario, but as of my testing I've found that it either run side-by-side with 2019 version and I was able to fully compile and run a solution that mixed projects for different SDK versions (Core 3.1, 5 and 6).
 
-Its important to note that **Visual Studio 2022 is still an early Preview, lacking several of the features and workloads from its former version and very buggy**. Its definately not an viable option as a primary development, but at least it shed some light on the tunnel about what we can expect for the future. But we don't have any expected time-frame for when the stable version will arise. 
+At the time of this writing Visual Studio 2022 for is an early Preview and does not yet have several features and workloads already available in the 2019 version. As its still in prewview, we don't recommend it as your primary development tool but we expect that to change once it is fully released.
 
 It's never been easy to be an early adopter! 🤷‍♂️
 
