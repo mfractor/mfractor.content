@@ -1,8 +1,8 @@
 # .NET 6 for Mac with Apple Silicon Developers
 
-Microsoft released .NET 6 with a great focus on the availability of its runtime and SDK compiled natively for the `arm64` architectures of Apple Silicon Macs. This is exciting news but, its just half of the history. When it comes to the developer side the native promisse is still lacking decent tooling support.
+Microsoft released .NET 6 with a great focus on the availability of its runtime and SDK compiled natively for the `arm64` architectures of Apple Silicon Macs. This is exciting news but, its just half of the history. When it comes to the developer side the native promise is still lacking decent tooling support.
 
-This post is an attempt to document how I've setup my environment on a MacBook Pro with an M1 processor, trying to circunvent all the pains of being such an early adopter. 🤕
+This post is an attempt to document how I've setup my environment on a MacBook Pro with an M1 processor, trying to circumvent all the pains of being such an early adopter. 🤕
 
 ## The Problem
 
@@ -24,36 +24,32 @@ The thing is, there is a workaround this issue. You can still have Visual Studio
 
 ![](img/sdk-location.png)
 
-That should put you on a supported scenario where you can still work with your existing projects that you hasn't updated to .NET 6. The limitation is that you won't be able to work on those newer projects.
+That should put you on a supported scenario where you can still work with your existing projects that you hasn't updated to .NET 6. The limitation is that you won't be able to work on those newer projects (and you will still get the annoying banner every time you open up Visual Studio).
 
 ## Visual Studio 2022 for Mac Preview
 
-While Visual Studio 2022 for Windows was released along-side with .NET 6 last November, its macOS counterpart is still in a very early Preview. Microsoft has decided to do a huge refactor to the IDE, which is very desirable, but at the cost of us not knowing when the tool will be ready.
-
-Since the Preview 3 it added support to .NET 6, but you had to pick if you wanted it to work with the newer or the former versions, as picted in the release notes:
+While Visual Studio 2022 for Windows was released along-side with .NET 6 last November, its macOS counterpart is still in a very early Preview. Microsoft has decided to do a huge refactor to the IDE migrating several parts to native macOS code which will allow full `arm64` support, but it will still take a bit longer until a stable release. Since the Preview 3 it added support to .NET 6, but you had to pick if you wanted it to work with the newer or the former versions, as described in the release notes:
 
 >On Apple Silicon (M1 or Arm64) machines, the .NET 5.0, 6.0 and .NET Core 3.1 x64 SDKs, released in November, are not supported by Visual Studio for Mac 17.0 Preview 3. This is because the new x64 .NET SDKs install into a different directory and Visual Studio for Mac currently only supports the original .NET SDK install location, which is now only used by the Arm64 SDK.
 > * If .NET 5.0, 6.0 or .NET Core 3.1 x64 SDKs are installed, then these should be removed, and the .NET 6 Arm64 SDK installed instead.
 > * Learn how to migrate to .NET 6 Arm64 SDK with these instructions.
 > * Visual Studio for Mac 8.10.13 and earlier versions are not supported side by side with Visual Studio for Mac 17.0 Preview 3.
 
-This is messy! There's not support on side-by-side installation of the previous versions, and you gotta pick which version of .NET SDK you want installed. 
+This is a bit confusing, but I've decided to try things out and I've found that as of the Preview 4 I was able to either run it side-by-side with 2019 version and to fully compile and run a solution that mixed projects for different SDK versions (Core 3.1, 5 and 6), although there wasn't any words about it on the Release Notes.
 
-As the time of this writing the latest Preview release was the 4th, from december 14th. There is no word on the Release Notes about this messy .NET support scenario, but as of my testing I've found that it either run side-by-side with 2019 version and I was able to fully compile and run a solution that mixed projects for different SDK versions (Core 3.1, 5 and 6).
-
-At the time of this writing Visual Studio 2022 for is an early Preview and does not yet have several features and workloads already available in the 2019 version. As its still in prewview, we don't recommend it as your primary development tool but we expect that to change once it is fully released.
+This sounds like a workaround and Microsoft seems to be heading to add the desired support for the former versions of the SDK, but we can't lose from sight that Visual Studio 2022 for Mac is an early Preview and does not yet have several features and workloads already available in the 2019 version. As its still in preview, we don't recommend it as your primary development tool but we expect that to change once it is fully released.
 
 It's never been easy to be an early adopter! 🤷‍♂️
 
 ## Using JetBrains Rider
 
-JetBrains has been gaining momentum as a preferred IDE for .NET developers beyond the mess that Microsoft is marking with Visual Studio for Mac. Its most recent version is fully support on Apple Silicon Macs and is already using .NET 6 as its backend.
+JetBrains has been gaining momentum as a preferred IDE for .NET developers beyond the confusion that Visual Studio for Mac is in its current state. Its most recent version is fully support on Apple Silicon Macs and is already using .NET 6 as its backend.
 
 It is possible to use Rider for either former and the latest .NET releases. The tricky is to select the proper version of the CLI tool on the Preferences:
 
 ![](img/rider-sdk.png)
 
-This can be set per solution, which means that you won't be able to mix current and former versions on the same solution, but with a bit of organization on your project structure it works pretty fine!
+This can be set per solution, which means that you won't be able to mix current and former versions on the same solution, but with a bit of organization on your project structure it works pretty fine! So depending on your workload (and your will to spend on buying a Rider subscription), it may come as a good alternative if you're on such scenario.
 
 ## What about MFractor?
 
